@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stronghold Crusader (Rust)</title>
+<meta name="description" content="A native Apple Silicon port of Stronghold Crusader: Definitive Edition's engine. Brings its own engine, uses your own copy of the game.">
+<link rel="icon" href="img/icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #1f160e; --bg2: #2a1e13; --panel: #33251699; --gold: #dbb562; --gold2: #f0d79a;
+    --text: #ece0c4; --dim: #b8a78a; --crimson: #8c1f17; --crimson2: #a8291f; --line: #5a4228;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 17px/1.65 "Libre Baskerville", Baskerville, Georgia, serif; }
+  a { color: var(--gold2); }
+  h1, h2, h3 { font-family: Cinzel, Copperplate, "Trajan Pro", serif; color: var(--gold); letter-spacing: .04em; font-weight: 700; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 16px; }
+
+  header.hero { position: relative; min-height: 78vh; display: flex; align-items: flex-end; background: #000 url(img/menu.jpg) center 30% / cover no-repeat; }
+  header.hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, #0008 0%, #0003 35%, var(--bg) 100%); }
+  .hero .wrap { position: relative; z-index: 1; padding-bottom: 48px; }
+  .hero h1 { font-size: clamp(34px, 6vw, 68px); line-height: 1.05; margin: 0 0 6px; text-shadow: 0 2px 18px #000; }
+  .hero .sub { font-style: italic; font-size: clamp(17px, 2.2vw, 22px); color: var(--text); text-shadow: 0 1px 10px #000; margin: 0 0 26px; max-width: 760px; }
+  .btn { display: inline-block; padding: 12px 22px; border-radius: 8px; font: 700 16px/1 "Libre Baskerville", serif; text-decoration: none; margin: 0 10px 10px 0; }
+  .btn.primary { background: var(--crimson); color: #fff; border: 1px solid var(--crimson2); box-shadow: 0 4px 18px #0007; }
+  .btn.primary:hover { background: var(--crimson2); }
+  .btn.ghost { color: var(--gold2); border: 1px solid var(--gold); background: #0006; }
+  .badges { color: var(--dim); font-size: 14px; margin-top: 10px; }
+
+  section { padding: 56px 0; border-top: 1px solid var(--line); }
+  section h2 { font-size: 30px; margin: 0 0 18px; }
+  .lead { max-width: 800px; color: var(--text); }
+  figure { margin: 0; }
+  figure img { width: 100%; display: block; border-radius: 10px; border: 1px solid var(--line); box-shadow: 0 10px 40px #000a; }
+  figcaption { color: var(--dim); font-size: 14px; font-style: italic; margin-top: 8px; }
+
+  .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; margin-top: 26px; }
+  .step { background: var(--bg2); border: 1px solid var(--line); border-radius: 12px; padding: 20px; }
+  .step .n { font: 700 28px Cinzel, serif; color: var(--crimson2); }
+  .step h3 { margin: 4px 0 8px; font-size: 19px; }
+  .step p { margin: 0; color: var(--dim); font-size: 15px; }
+
+  .shots { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 22px; margin-top: 26px; }
+  ul.checks { list-style: none; padding: 0; margin: 0; }
+  ul.checks li { padding: 6px 0 6px 30px; position: relative; }
+  ul.checks li::before { content: "✓"; position: absolute; left: 4px; color: var(--gold); font-weight: 700; }
+  ol.install li { margin: 6px 0; }
+  code { background: #0005; padding: 2px 6px; border-radius: 4px; font-size: 14px; color: var(--gold2); }
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; }
+  @media (max-width: 760px) { .two { grid-template-columns: 1fr; } header.hero { min-height: 64vh; } }
+  .note { background: var(--bg2); border-left: 3px solid var(--crimson2); padding: 14px 18px; border-radius: 6px; color: var(--dim); font-size: 15px; }
+  footer { border-top: 1px solid var(--line); padding: 30px 0 50px; color: var(--dim); font-size: 13px; }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <h1>Stronghold Crusader<br>on your Mac</h1>
+    <p class="sub">A native Apple Silicon engine for Stronghold Crusader: Definitive Edition, rebuilt in Rust. No Windows, no CrossOver: open the app, sign in to Steam once, play.</p>
+    <a class="btn primary" href="https://github.com/YannickAaron/Strong-Hold/releases/latest">Download for Mac</a>
+    <a class="btn ghost" href="#first-start">How it works</a>
+    <div class="badges">macOS 12 or newer · Apple Silicon · Requires your own copy of the game on Steam</div>
+  </div>
+</header>
+
+<main>
+<section>
+  <div class="wrap">
+    <h2>The castle, natively</h2>
+    <p class="lead">The original game is a Unity front end driving a Windows-only simulation library. This project reverse engineers that simulation and ports it to Rust, tick for tick, and draws it with Metal. Your castles, your economy and the lords you fight run on the Mac itself, verified against recordings of the original.</p>
+    <figure style="margin-top:26px">
+      <img src="img/game.jpg" alt="A skirmish on Crater Lake running in the native engine: keep, walls, archers on the tower, the build bar and minimap">
+      <figcaption>A skirmish on Crater Lake, simulated and drawn by the native engine.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="first-start">
+  <div class="wrap">
+    <h2>First start: three clicks</h2>
+    <p class="lead">The app brings the engine, not the game. The first time you open it, a setup window gets the graphics, sounds, maps and videos from your own copy of the game, once.</p>
+    <div class="steps">
+      <div class="step"><div class="n">I</div><h3>Check</h3><p>Setup checks for a Steam account that owns the game, about 8 GB of free space and an internet connection. A copy already on the Mac (for example in CrossOver) is found and used directly.</p></div>
+      <div class="step"><div class="n">II</div><h3>Sign in to Steam</h3><p>Scan a code with the Steam app on your phone, or sign in with your user name, password and Steam Guard code. The Steam app for Mac doesn't need to be installed.</p></div>
+      <div class="step"><div class="n">III</div><h3>Download and prepare</h3><p>Your copy of the game downloads (about 5.7 GB) and its assets are prepared for the native engine in about two minutes. Then the main menu opens.</p></div>
+    </div>
+    <div class="shots">
+      <figure><img src="img/setup-steam.jpg" alt="The setup window before download: checks for a Steam account, free space and internet"><figcaption>Setup with no game on the Mac yet.</figcaption></figure>
+      <figure><img src="img/setup.jpg" alt="The setup window after finding a copy of the game, with the game's loading art behind"><figcaption>A copy found on the Mac: one click.</figcaption></figure>
+      <figure><img src="img/setup-progress.jpg" alt="The setup window preparing the game's videos, progress bar at 36 percent"><figcaption>Preparing the assets, once.</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap two">
+    <div>
+      <h2>Install</h2>
+      <ol class="install">
+        <li>Download <code>Stronghold Crusader (Rust).dmg</code> from the <a href="https://github.com/YannickAaron/Strong-Hold/releases/latest">latest release</a>.</li>
+        <li>Open it and drag the app into Applications.</li>
+        <li>The first time only: right-click the app and choose <b>Open</b>. On macOS 15 or newer, open it once, then go to System Settings › Privacy &amp; Security and click <b>Open Anyway</b>. The app isn't notarized by Apple yet.</li>
+        <li>Follow the setup window. Afterwards the app opens straight to the main menu.</li>
+      </ol>
+    </div>
+    <div>
+      <h2>You need</h2>
+      <ul class="checks">
+        <li>A Mac with Apple Silicon (M1 or newer), macOS 12 or newer</li>
+        <li><a href="https://store.steampowered.com/app/3024040/">Stronghold Crusader: Definitive Edition</a> on your Steam account</li>
+        <li>About 8 GB of free disk space</li>
+        <li>Optional: the Steam app on your phone, to sign in by scanning a code</li>
+      </ul>
+      <p class="note">Your Steam sign-in goes to Steam through Valve's open-source DepotDownloader, which the app carries. Your password is passed to it once and never saved.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>What's there today</h2>
+    <p class="lead">Skirmish against AI lords, the historical campaigns, the Crusader Trail, sandbox, local network multiplayer, saving and loading, the original music, speech and videos, and Mac niceties: menu bar, trackpad zoom and rotate, full-screen Spaces. The port is in active development; parts of the simulation are still being verified against the original.</p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    An unofficial fan project, not affiliated with or endorsed by Firefly Studios. Stronghold Crusader is a trademark of Firefly Studios. The app contains no files from the game: it uses your own copy, bought on Steam. DepotDownloader is © SteamRE, GPL-2.0.
+  </div>
+</footer>
+</body>
+</html>
