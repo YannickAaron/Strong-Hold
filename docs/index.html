@@ -31,6 +31,11 @@
   .btn.primary:hover { background: var(--crimson2); }
   .btn.ghost { color: var(--gold2); border: 1px solid var(--gold); background: #0006; }
   .badges { color: var(--dim); font-size: 14px; margin-top: 10px; }
+  .badges a { color: var(--dim); }
+  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin: 28px 0 22px; }
+  .stats div { background: var(--bg2); border: 1px solid var(--line); border-radius: 12px; padding: 18px 20px; }
+  .stats b { display: block; font: 700 34px/1.1 Cinzel, serif; color: var(--gold); margin-bottom: 6px; }
+  .stats span { color: var(--dim); font-size: 15px; }
 
   section { padding: 56px 0; border-top: 1px solid var(--line); }
   section h2 { font-size: 30px; margin: 0 0 18px; }
@@ -62,14 +67,32 @@
 <header class="hero">
   <div class="wrap">
     <h1>Stronghold Crusader<br>on your Mac</h1>
-    <p class="sub">A native Apple Silicon engine for Stronghold Crusader: Definitive Edition, rebuilt in Rust. No Windows, no CrossOver: open the app, sign in to Steam once, play.</p>
-    <a class="btn primary" href="https://github.com/YannickAaron/Strong-Hold/releases/latest">Download for Mac</a>
-    <a class="btn ghost" href="#first-start">How it works</a>
-    <div class="badges">macOS 12 or newer · Apple Silicon · Requires your own copy of the game on Steam</div>
+    <p class="sub">The engine of Stronghold Crusader: Definitive Edition, rebuilt from scratch in Rust and drawn with Metal. Native on Apple Silicon: no Windows, no CrossOver, no emulation. Open the app, sign in to Steam once, play.</p>
+    <a class="btn primary" href="https://github.com/YannickAaron/Strong-Hold/releases/latest/download/Stronghold-Crusader-Rust.dmg">Download for Mac</a>
+    <a class="btn ghost" href="#video">Watch it run</a>
+    <div class="badges">Free · 41 MB · macOS 12 or newer · Apple Silicon · Requires your own copy of the game on Steam · <a href="https://github.com/YannickAaron/Strong-Hold/releases">All releases</a></div>
   </div>
 </header>
 
 <main>
+<section id="video">
+  <div class="wrap">
+    <h2>Rust. Native. Fast.</h2>
+    <p class="lead">Every tick of the simulation runs as native Apple Silicon code, written in Rust and checked against the original game tick by tick. The picture comes straight from Metal. Nothing is translated or emulated on the way.</p>
+    <figure style="margin-top:22px">
+      <video src="img/gameplay.mp4" poster="img/gameplay.jpg" autoplay muted loop playsinline controls preload="metadata" style="width:100%;display:block;border-radius:10px;border:1px solid var(--line);box-shadow:0 10px 40px #000a"></video>
+      <figcaption>Recorded straight from the engine: the main menu, a town at normal speed, then fast-forward.</figcaption>
+    </figure>
+    <div class="stats">
+      <div><b>120 fps</b><span>steady frame rate, 8.3 ms a frame</span></div>
+      <div><b>12×</b><span>fast-forward: about 500 game ticks a second, the game's normal pace is 40</span></div>
+      <div><b>~1 s</b><span>to load a save or start a mission</span></div>
+      <div><b>41 MB</b><span>download: the engine only, no game files</span></div>
+    </div>
+    <p class="note">Measured on a MacBook Pro with M1 Max. The simulation is a ground-up port of the original engine's logic, so battles, economy and AI play out the way they do in the original.</p>
+  </div>
+</section>
+
 <section>
   <div class="wrap">
     <h2>The castle, natively</h2>
@@ -103,7 +126,7 @@
     <div>
       <h2>Install</h2>
       <ol class="install">
-        <li>Download <code>Stronghold Crusader (Rust).dmg</code> from the <a href="https://github.com/YannickAaron/Strong-Hold/releases/latest">latest release</a>.</li>
+        <li><a href="https://github.com/YannickAaron/Strong-Hold/releases/latest/download/Stronghold-Crusader-Rust.dmg">Download the app</a> (always the newest version).</li>
         <li>Open it and drag the app into Applications.</li>
         <li>The first time only: right-click the app and choose <b>Open</b>. On macOS 15 or newer, open it once, then go to System Settings › Privacy &amp; Security and click <b>Open Anyway</b>. The app isn't notarized by Apple yet.</li>
         <li>Follow the setup window. Afterwards the app opens straight to the main menu.</li>

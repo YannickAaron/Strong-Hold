@@ -5,13 +5,20 @@
 <p align="center"><b>Stronghold Crusader: Definitive Edition on your Mac, natively.</b><br>
 No Windows, no CrossOver: open the app, sign in to Steam once, play.</p>
 
-<p align="center"><a href="https://github.com/YannickAaron/Strong-Hold/releases/latest"><b>Download for Mac</b></a> · <a href="https://yannickaaron.github.io/Strong-Hold/">Website</a></p>
+<p align="center"><a href="https://github.com/YannickAaron/Strong-Hold/releases/latest/download/Stronghold-Crusader-Rust.dmg"><b>Download for Mac</b></a> · <a href="https://yannickaaron.github.io/Strong-Hold/">Website</a></p>
 
 ![A skirmish on Crater Lake running in the native engine](docs/img/game.jpg)
 
-The original game is a Unity front end driving a Windows-only simulation library. This project rebuilds that
-simulation in Rust and draws it with Metal on Apple Silicon. Your castles, your economy and the lords you fight run
-on the Mac itself, checked tick by tick against the original.
+**Built in Rust, native on Apple Silicon.** The original game is a Unity front end driving a Windows-only
+simulation library. This project rebuilds that simulation from scratch in Rust and draws it with Metal: no Windows,
+no CrossOver, no emulation. Your castles, your economy and the lords you fight run as native code, checked tick by
+tick against the original.
+
+| 120 fps | 12× fast-forward | ~1 s | 41 MB |
+|:---:|:---:|:---:|:---:|
+| steady frame rate | about 500 ticks a second (normal: 40) | to load a save | download, engine only |
+
+[▶ Watch it run](https://yannickaaron.github.io/Strong-Hold/#video) · measured on an M1 Max
 
 ## You need
 
@@ -22,7 +29,7 @@ on the Mac itself, checked tick by tick against the original.
 
 ## Install
 
-1. Download `Stronghold-Crusader-Rust-<version>.dmg` from the [latest release](https://github.com/YannickAaron/Strong-Hold/releases/latest).
+1. [Download the app](https://github.com/YannickAaron/Strong-Hold/releases/latest/download/Stronghold-Crusader-Rust.dmg) (always the newest version; older ones: [Releases](https://github.com/YannickAaron/Strong-Hold/releases)).
 2. Open it and drag **Stronghold Crusader (Rust)** into Applications.
 3. The first time only, because the app isn't notarized by Apple yet:
    - macOS 14: right-click the app and choose **Open**.
