@@ -1,11 +1,11 @@
 <p align="center"><img src="docs/img/icon.png" width="128" alt="App icon: a sand-stone tower with a crimson pennant"></p>
 
-<h1 align="center">Stronghold Crusader (Rust)</h1>
+<h1 align="center">Strong Hold</h1>
 
-<p align="center"><b>Stronghold Crusader: Definitive Edition on your Mac, natively.</b><br>
+<p align="center"><b>A native Mac engine for Stronghold Crusader: Definitive Edition.</b><br>
 No Windows, no CrossOver: open the app, sign in to Steam once, play.</p>
 
-<p align="center"><a href="https://github.com/YannickAaron/Strong-Hold/releases/latest/download/Stronghold-Crusader-Rust.dmg"><b>Download for Mac</b></a> · <a href="https://yannickaaron.github.io/Strong-Hold/">Website</a></p>
+<p align="center"><a href="https://github.com/YannickAaron/Strong-Hold/releases/latest/download/Strong-Hold.dmg"><b>Download for Mac</b></a> · <a href="https://yannickaaron.github.io/Strong-Hold/">Website</a></p>
 
 ![A skirmish on Crater Lake running in the native engine](docs/img/game.jpg)
 
@@ -29,8 +29,8 @@ tick against the original.
 
 ## Install
 
-1. [Download the app](https://github.com/YannickAaron/Strong-Hold/releases/latest/download/Stronghold-Crusader-Rust.dmg) (always the newest version; older ones: [Releases](https://github.com/YannickAaron/Strong-Hold/releases)).
-2. Open it and drag **Stronghold Crusader (Rust)** into Applications.
+1. [Download the app](https://github.com/YannickAaron/Strong-Hold/releases/latest/download/Strong-Hold.dmg) (always the newest version; older ones: [Releases](https://github.com/YannickAaron/Strong-Hold/releases)).
+2. Open it and drag **Strong Hold** into Applications.
 3. The first time only, because the app isn't notarized by Apple yet:
    - macOS 14: right-click the app and choose **Open**.
    - macOS 15 or newer: open it once, then go to System Settings › Privacy & Security and click **Open Anyway**.
@@ -48,7 +48,7 @@ and videos from **your own copy** of the game, once:
 | ![Setup preparing the assets](docs/img/setup-progress.jpg) | **Download and prepare.** Your copy downloads (about 5.7 GB), then its assets are prepared for the native engine in a few minutes. |
 
 Your Steam sign-in goes to Steam through Valve's open-source DepotDownloader, which the app carries. Your password is
-passed to it once and never saved. The game's files go to `~/Library/Application Support/Stronghold Crusader (Rust)`.
+passed to it once and never saved. The game's files go to `~/Library/Application Support/Strong Hold`.
 
 ## What's there
 
@@ -57,13 +57,21 @@ and loading, the original music, speech and videos, and Mac touches: menu bar, t
 Spaces. The port is in active development; parts of the simulation are still being checked against the original.
 
 Something wrong? [Open an issue](https://github.com/YannickAaron/Strong-Hold/issues) and attach
-`~/Library/Logs/Stronghold Crusader (Rust).log`.
+`~/Library/Logs/Strong Hold.log`.
 
 ## Legal
 
-An unofficial fan project, not affiliated with or endorsed by Firefly Studios. Stronghold Crusader is a trademark of
-Firefly Studios. The app contains no files from the game: it uses your own copy, bought on Steam.
+Strong Hold is an unofficial, free, non-commercial fan project. It is not affiliated with, endorsed or sponsored by
+Firefly Studios. Stronghold and Stronghold Crusader are trademarks of Firefly Studios; they are used here only to say
+which game this engine works with. The app contains no files from the game: it needs your own copy of Stronghold
+Crusader: Definitive Edition, bought on Steam, and reads the graphics, sounds and maps from that copy on your Mac.
+
+Firefly Studios, or anyone with a concern about this project: please
+[open an issue](https://github.com/YannickAaron/Strong-Hold/issues) and it will be answered promptly.
 
 The app includes [DepotDownloader](https://github.com/SteamRE/DepotDownloader) 3.4.0 by SteamRE, licensed GPL-2.0;
 its licence is inside the app (`Contents/Resources/LICENSE-DepotDownloader.txt`) and its source is at
-https://github.com/SteamRE/DepotDownloader/tree/DepotDownloader_3.4.0.
+https://github.com/SteamRE/DepotDownloader/tree/DepotDownloader_3.4.0 (also attached to every release).
+
+The app also includes open-source Rust libraries and libvpx; their licences are in
+`Contents/Resources/THIRD-PARTY-NOTICES.txt` inside the app.
