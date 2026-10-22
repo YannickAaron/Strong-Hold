@@ -5,7 +5,7 @@
 <p align="center"><b>A native Mac engine for Stronghold Crusader: Definitive Edition.</b><br>
 No Windows, no CrossOver: open the app, sign in to Steam once, play.</p>
 
-<p align="center"><a href="https://github.com/YannickAaron/Strong-Hold/releases/latest/download/Strong-Hold.dmg"><b>Download for Mac</b></a> · <a href="https://yannickaaron.github.io/Strong-Hold/">Website</a></p>
+<p align="center"><a href="https://github.com/YannickAaron/Strong-Hold/releases/latest/download/Strong-Hold.dmg"><b>Download for Mac</b></a> · <a href="https://yannickaaron.github.io/Strong-Hold/">Website</a> · <a href="https://github.com/YannickAaron/Strong-Hold-source">Source code</a></p>
 
 ![A skirmish on Crater Lake running in the native engine](docs/img/game.jpg)
 
@@ -49,6 +49,28 @@ and videos from **your own copy** of the game, once:
 
 Your Steam sign-in goes to Steam through Valve's open-source DepotDownloader, which the app carries. Your password is
 passed to it once and never saved. The game's files go to `~/Library/Application Support/Strong Hold`.
+
+## What the app does on your Mac
+
+**Internet: three things, nothing else.**
+1. **Update check**, once a day: asks GitHub for the latest release. It sends only the app's version (GitHub sees your
+   IP address, like any website).
+2. **Steam**, only when you choose to download the game: Valve's open-source DepotDownloader signs in and downloads from
+   Steam. The password you type goes to it once, through its input: never saved, never written to the log, never on a
+   command line.
+3. **LAN games**, only when you host or join: your local network (UDP port 47777 to find games, TCP 47778 to play).
+
+**No telemetry**, no analytics, no ads, no account of ours.
+
+**Files:** the app writes only to `~/Library/Application Support/Strong Hold` (your copy of the game, the prepared
+assets, settings, saves, maps) and `~/Library/Logs/Strong Hold.log`. A copy of the game in CrossOver is only read
+(its saves show up in Load Game too, and deleting one there deletes it). To uninstall, drag the app to the Bin and delete that folder.
+
+**Other programs** it starts: DepotDownloader (Steam download), macOS's `curl` (update check), `open` (when you click to
+show a folder or the releases page).
+
+**Check it yourself:** the [source code](https://github.com/YannickAaron/Strong-Hold-source) of everything above (all of the app except the simulation, which has
+no network or file code), and every release's SHA-256 and VirusTotal scan.
 
 ## What it supports
 

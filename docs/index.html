@@ -82,7 +82,7 @@
     <a class="btn primary" href="https://github.com/YannickAaron/Strong-Hold/releases/latest/download/Strong-Hold.dmg">Download for Mac</a>
     <a class="btn ghost" href="#video">Watch it run</a>
     <a class="btn ghost" href="#releases">What's new</a>
-    <div class="badges">Free · 41 MB · macOS 12 or newer · Apple Silicon · Requires your own copy of the game on Steam · <a href="https://github.com/YannickAaron/Strong-Hold/releases">All releases</a></div>
+    <div class="badges">Free · 41 MB · macOS 12 or newer · Apple Silicon · Requires your own copy of the game on Steam · <a href="https://github.com/YannickAaron/Strong-Hold/releases">All releases</a> · <a href="https://github.com/YannickAaron/Strong-Hold-source">Source code</a> · <a href="#privacy">Privacy</a></div>
   </div>
 </header>
 
@@ -157,6 +157,33 @@
   </div>
 </section>
 
+<section id="privacy">
+  <div class="wrap">
+    <h2>What the app does on your Mac</h2>
+    <p class="lead">No telemetry, no analytics, no ads, no account of ours. The internet is used for three things, nothing else:</p>
+    <div class="steps">
+      <div class="step"><div class="n">I</div><h3>Update check</h3><p>Once a day the app asks GitHub for the latest release. It sends only its version; GitHub sees your IP address, like any website.</p></div>
+      <div class="step"><div class="n">II</div><h3>Steam</h3><p>Only when you choose to download the game: Valve's open-source DepotDownloader signs in and downloads. Your password goes to it once, through its input: never saved, never logged, never on a command line.</p></div>
+      <div class="step"><div class="n">III</div><h3>LAN games</h3><p>Only when you host or join: your local network, UDP port 47777 to find games and TCP 47778 to play.</p></div>
+    </div>
+    <div class="two" style="margin-top:26px">
+      <div>
+        <h3>Files</h3>
+        <p class="lead">The app writes only to <code>~/Library/Application Support/Strong Hold</code> (your copy of the game, the prepared assets, settings, saves, maps) and <code>~/Library/Logs/Strong Hold.log</code>. A copy of the game in CrossOver is only read (its saves show up in Load Game too, and deleting one there deletes it). To uninstall, drag the app to the Bin and delete that folder.</p>
+        <p class="lead">Other programs it starts: DepotDownloader for the Steam download, macOS's <code>curl</code> for the update check, <code>open</code> when you click to show a folder or the releases page.</p>
+      </div>
+      <div>
+        <h3>Check it yourself</h3>
+        <ul class="checks">
+          <li><a href="https://github.com/YannickAaron/Strong-Hold-source">The source code</a> of all of this: the whole app except the simulation, which has no network or file code</li>
+          <li>Every release lists the DMG's SHA-256 and links its VirusTotal scan</li>
+          <li>The bundled DepotDownloader is pinned by hash; its source comes with every release</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="features">
   <div class="wrap">
     <h2>What it supports</h2>
@@ -194,7 +221,7 @@
 
 <footer>
   <div class="wrap">
-    Strong Hold is an unofficial, free, non-commercial fan project, not affiliated with, endorsed or sponsored by Firefly Studios. Stronghold and Stronghold Crusader are trademarks of Firefly Studios, used here only to say which game this engine works with. The app contains no files from the game: it needs your own copy, bought on Steam. DepotDownloader is © SteamRE, GPL-2.0. Firefly Studios, or anyone with a concern: please <a href="https://github.com/YannickAaron/Strong-Hold/issues">open an issue</a>.
+    Strong Hold is an unofficial, free, non-commercial fan project, not affiliated with, endorsed or sponsored by Firefly Studios. Stronghold and Stronghold Crusader are trademarks of Firefly Studios, used here only to say which game this engine works with. The app contains no files from the game: it needs your own copy, bought on Steam. DepotDownloader is © SteamRE, GPL-2.0. Source code (without the simulation): <a href="https://github.com/YannickAaron/Strong-Hold-source">Strong-Hold-source</a>. Firefly Studios, or anyone with a concern: please <a href="https://github.com/YannickAaron/Strong-Hold/issues">open an issue</a>.
   </div>
 </footer>
 </body>
