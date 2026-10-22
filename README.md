@@ -93,6 +93,7 @@ game files, settings and saves stay.
 
 | Version | Date | What's new |
 |---|---|---|
+| [0.8.1](https://github.com/YannickAaron/Strong-Hold/releases/tag/v0.8.1) | 22 Oct 2026 | No more shell script inside the app (one virus scanner mistook it for a trojan), the source code of everything except the simulation is public, and a page on what the app does on your Mac |
 | [0.8.0](https://github.com/YannickAaron/Strong-Hold/releases/tag/v0.8.0) | 22 Oct 2026 | Map Editor part 2: keeps, buildings, walls, troops and starting goods per player; editor maps play in Custom Skirmish. Coat of arms editor, type your player name. LAN shares coats of arms (everyone needs 0.8.0) |
 | [0.7.0](https://github.com/YannickAaron/Strong-Hold/releases/tag/v0.7.0) | 22 Oct 2026 | Sands of Time results after each trail win, trail completion screens, campaign missions wait for the advisor before the mission-over screen, "New game files available" downloads only what's missing |
 | [0.6.0](https://github.com/YannickAaron/Strong-Hold/releases/tag/v0.6.0) | 22 Oct 2026 | Advisor and lord videos over the minimap, full-screen win/lose videos, victory and defeat speech, building sketches, tutorial arrows, building tooltips, the original on-screen texts, multiplayer chat with insults |
