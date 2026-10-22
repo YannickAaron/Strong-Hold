@@ -24,7 +24,7 @@ tick against the original.
 
 - A Mac with Apple Silicon (M1 or newer), macOS 12 or newer
 - [Stronghold Crusader: Definitive Edition](https://store.steampowered.com/app/3024040/) on your Steam account
-- About 8 GB of free disk space
+- About 9.5 GB of free disk space
 - Optional: the Steam app on your phone, to sign in by scanning a code
 
 ## Install
@@ -43,9 +43,9 @@ and videos from **your own copy** of the game, once:
 
 | | |
 |---|---|
-| ![Setup before the download](docs/img/setup-steam.jpg) | **Check, then sign in to Steam.** Setup checks for a Steam account that owns the game, about 8 GB free and an internet connection. Then scan a code with the Steam app on your phone, or use your user name, password and Steam Guard code. The Steam app for Mac doesn't need to be installed. |
+| ![Setup before the download](docs/img/setup-steam.jpg) | **Check, then sign in to Steam.** Setup checks for a Steam account that owns the game, about 9.5 GB free and an internet connection. Then scan a code with the Steam app on your phone, or use your user name, password and Steam Guard code. The Steam app for Mac doesn't need to be installed. |
 | ![Setup with a copy found](docs/img/setup.jpg) | **Already on this Mac?** A copy of the game found on the Mac (for example in CrossOver) is used directly: one click, no download. |
-| ![Setup preparing the assets](docs/img/setup-progress.jpg) | **Download and prepare.** Your copy downloads (about 5.7 GB), then its assets are prepared for the native engine in a few minutes. |
+| ![Setup preparing the assets](docs/img/setup-progress.jpg) | **Download and prepare.** Your copy downloads (about 6.2 GB), then its assets are prepared for the native engine in a few minutes. |
 
 Your Steam sign-in goes to Steam through Valve's open-source DepotDownloader, which the app carries. Your password is
 passed to it once and never saved. The game's files go to `~/Library/Application Support/Strong Hold`.
