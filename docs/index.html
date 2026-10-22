@@ -59,6 +59,17 @@
   .two { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; }
   @media (max-width: 760px) { .two { grid-template-columns: 1fr; } header.hero { min-height: 64vh; } }
   .note { background: var(--bg2); border-left: 3px solid var(--crimson2); padding: 14px 18px; border-radius: 6px; color: var(--dim); font-size: 15px; }
+  .feat { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 18px; margin-top: 26px; }
+  .feat div { background: var(--bg2); border: 1px solid var(--line); border-radius: 12px; padding: 18px 20px; }
+  .feat h3 { margin: 0 0 6px; font-size: 18px; }
+  .feat p { margin: 0; color: var(--dim); font-size: 15px; }
+  .rel { list-style: none; padding: 0; margin: 26px 0 0; border-left: 2px solid var(--line); }
+  .rel li { position: relative; padding: 0 0 22px 24px; }
+  .rel li::before { content: ""; position: absolute; left: -7px; top: 7px; width: 12px; height: 12px; border-radius: 50%; background: var(--crimson2); border: 2px solid var(--bg); }
+  .rel li:first-child::before { background: var(--gold); }
+  .rel b { font-family: Cinzel, serif; color: var(--gold); font-size: 18px; }
+  .rel .d { color: var(--dim); font-size: 14px; margin-left: 8px; }
+  .rel p { margin: 4px 0 0; color: var(--dim); font-size: 15px; }
   footer { border-top: 1px solid var(--line); padding: 30px 0 50px; color: var(--dim); font-size: 13px; }
 </style>
 </head>
@@ -70,6 +81,7 @@
     <p class="sub">A native Mac engine for Stronghold Crusader: Definitive Edition, rebuilt from scratch in Rust and drawn with Metal. Native on Apple Silicon: no Windows, no CrossOver, no emulation. Open the app, sign in to Steam once, play.</p>
     <a class="btn primary" href="https://github.com/YannickAaron/Strong-Hold/releases/latest/download/Strong-Hold.dmg">Download for Mac</a>
     <a class="btn ghost" href="#video">Watch it run</a>
+    <a class="btn ghost" href="#releases">What's new</a>
     <div class="badges">Free · 41 MB · macOS 12 or newer · Apple Silicon · Requires your own copy of the game on Steam · <a href="https://github.com/YannickAaron/Strong-Hold/releases">All releases</a></div>
   </div>
 </header>
@@ -145,11 +157,37 @@
   </div>
 </section>
 
-<section>
+<section id="features">
   <div class="wrap">
-    <h2>What's there today</h2>
-    <p class="lead">Skirmish against AI lords, the historical campaigns, the Crusader Trail, sandbox, local network multiplayer, saving and loading, the original music, speech and videos, and Mac niceties: menu bar, trackpad zoom and rotate, full-screen Spaces. The port is in active development; parts of the simulation are still being verified against the original.</p>
+    <h2>What it supports</h2>
+    <p class="lead">The whole game, natively. The port is in active development; parts of the simulation are still being verified against the original. Not yet: online multiplayer and Intel Macs.</p>
+    <div class="feat">
+      <div><h3>Single player</h3><p>Skirmish against AI lords with Advanced Skirmish Options and Extreme, the historical campaigns, the Crusader Trail with Sands of Time, ranks, Customize, Skirmish Masters and custom trails, the tutorial, Free Build with events and powers.</p></div>
+      <div><h3>Multiplayer</h3><p>Local network games, co-op Crusader Trail, chat to chosen players or teams, the insults, pause and multiplayer saves.</p></div>
+      <div><h3>Map Editor</h3><p>Shape the land, water, trees, rocks and animals, then place keeps, buildings, walls, troops and starting goods. Your maps play in Custom Skirmish and the Sandbox.</p></div>
+      <div><h3>Your lord</h3><p>Player name, colour and the coat of arms editor, shown on troops, flags, the lobby, trails and score screens.</p></div>
+      <div><h3>The game's own feel</h3><p>Original music, speech, advisor and lord videos, win and lose videos, in-game Help, score screens with graphs, reports, building panels, market trading, tooltips and the original hotkeys.</p></div>
+      <div><h3>On the Mac</h3><p>Native Metal at 120 fps, 12× fast-forward, menu bar, trackpad zoom and rotate, full screen, borderless or windowed, and a notice when a new version is out.</p></div>
+    </div>
     <figure style="margin-top:26px"><img src="img/menu.jpg" alt="The main menu: Skirmish, Historical Campaigns, Sandbox, Multiplayer, Map Editor, Roadmap"><figcaption>The main menu, running natively.</figcaption></figure>
+  </div>
+</section>
+
+<section id="releases">
+  <div class="wrap">
+    <h2>Releases</h2>
+    <p class="lead">A new version every few days. The app tells you when one is out: download the new DMG and drag it over the old app; your game files, settings and saves stay. <a href="https://github.com/YannickAaron/Strong-Hold/releases">Every release on GitHub</a>.</p>
+    <ul class="rel">
+      <li><b><a href="https://github.com/YannickAaron/Strong-Hold/releases/tag/v0.8.0" style="color:inherit;text-decoration:none">0.8.0</a></b><span class="d">22 Oct 2026</span><p>Map Editor part 2: keeps, buildings, walls, troops and starting goods for each player; editor maps play in Custom Skirmish. Coat of arms editor and your own player name. LAN games share coats of arms.</p></li>
+      <li><b><a href="https://github.com/YannickAaron/Strong-Hold/releases/tag/v0.7.0" style="color:inherit;text-decoration:none">0.7.0</a></b><span class="d">22 Oct 2026</span><p>Sands of Time results after each trail win, trail completion screens, campaign missions wait for the advisor, and the main menu offers missing game files (one Steam sign-in, only what is new).</p></li>
+      <li><b><a href="https://github.com/YannickAaron/Strong-Hold/releases/tag/v0.6.0" style="color:inherit;text-decoration:none">0.6.0</a></b><span class="d">22 Oct 2026</span><p>Advisor and lord videos over the minimap, full-screen win and lose videos, victory and defeat speech, building sketches, tutorial arrows, building tooltips, multiplayer chat with insults.</p></li>
+      <li><b><a href="https://github.com/YannickAaron/Strong-Hold/releases/tag/v0.5.0" style="color:inherit;text-decoration:none">0.5.0</a></b><span class="d">22 Oct 2026</span><p>Map Editor part 1: pick a size and game type, shape the land, add water, trees, rocks and animals, save and load your maps.</p></li>
+      <li><b><a href="https://github.com/YannickAaron/Strong-Hold/releases/tag/v0.4.0" style="color:inherit;text-decoration:none">0.4.0</a></b><span class="d">21 Oct 2026</span><p>Your colour everywhere, the Allies panel, Free Build events and powers, control groups, Advanced Skirmish Options, exact projectile maths for LAN games in sync.</p></li>
+      <li><b><a href="https://github.com/YannickAaron/Strong-Hold/releases/tag/v0.3.0" style="color:inherit;text-decoration:none">0.3.0</a></b><span class="d">21 Oct 2026</span><p>In-game Help, the score screen, every building panel, market auto trading, the original hotkeys, a save dialog, credits, display modes and many options.</p></li>
+      <li><b><a href="https://github.com/YannickAaron/Strong-Hold/releases/tag/v0.2.0" style="color:inherit;text-decoration:none">0.2.0</a></b><span class="d">21 Oct 2026</span><p>New name: Strong Hold. The Crusader Trail, all historical campaign missions, Reports, full troop orders, the original camera, LAN chat, pause, saves and co-op trail.</p></li>
+      <li><b><a href="https://github.com/YannickAaron/Strong-Hold/releases/tag/v0.1.1" style="color:inherit;text-decoration:none">0.1.1</a></b><span class="d">21 Oct 2026</span><p>A notice on the main menu when a new version is out, co-op ally castles, AI sieges and squads, the tutorial.</p></li>
+      <li><b><a href="https://github.com/YannickAaron/Strong-Hold/releases/tag/v0.1.0" style="color:inherit;text-decoration:none">0.1.0</a></b><span class="d">20 Oct 2026</span><p>First release: the native engine and the first-start setup that gets your own copy of the game. Skirmish, campaigns, sandbox and LAN.</p></li>
+    </ul>
   </div>
 </section>
 </main>

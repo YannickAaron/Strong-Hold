@@ -50,11 +50,36 @@ and videos from **your own copy** of the game, once:
 Your Steam sign-in goes to Steam through Valve's open-source DepotDownloader, which the app carries. Your password is
 passed to it once and never saved. The game's files go to `~/Library/Application Support/Strong Hold`.
 
-## What's there
+## What it supports
 
-Skirmish against AI lords, the historical campaigns, the Crusader Trail, sandbox, local network multiplayer, saving
-and loading, the original music, speech and videos, and Mac touches: menu bar, trackpad zoom and rotate, full-screen
-Spaces. The port is in active development; parts of the simulation are still being checked against the original.
+| | |
+|---|---|
+| **Single player** | Skirmish against AI lords (Advanced Skirmish Options, Extreme), the historical campaigns with story pages, the Crusader Trail with Sands of Time, ranks, Customize, Skirmish Masters and custom trails, the tutorial, Free Build with events and powers |
+| **Multiplayer** | Local network (LAN) games, co-op Crusader Trail, chat to chosen players or teams, insults, pause, multiplayer saves |
+| **Map Editor** | Shape the land (heights, ground types, water, trees, rocks, animals), place keeps, buildings, walls and troops, starting goods; your maps play in Custom Skirmish and Sandbox |
+| **Your lord** | Player name, colour and coat of arms editor, shown on troops, flags, lobby, trails and score screens |
+| **The game's own feel** | Original music, speech, advisor and lord videos, win/lose videos, in-game Help pages, score screens with graphs, reports, building panels, market trading, tooltips, the original hotkeys |
+| **On the Mac** | Native Metal at 120 fps, 12× fast-forward, menu bar, trackpad zoom and rotate, full screen / borderless / windowed, saves in your Library, update notice when a new version is out |
+
+The port is in active development; parts of the simulation are still being checked against the original.
+Not yet: online multiplayer (Steam), Intel Macs.
+
+## Release history
+
+Every release: [Releases](https://github.com/YannickAaron/Strong-Hold/releases). Update by downloading the new DMG; your
+game files, settings and saves stay.
+
+| Version | Date | What's new |
+|---|---|---|
+| [0.8.0](https://github.com/YannickAaron/Strong-Hold/releases/tag/v0.8.0) | 22 Oct 2026 | Map Editor part 2: keeps, buildings, walls, troops and starting goods per player; editor maps play in Custom Skirmish. Coat of arms editor, type your player name. LAN shares coats of arms (everyone needs 0.8.0) |
+| [0.7.0](https://github.com/YannickAaron/Strong-Hold/releases/tag/v0.7.0) | 22 Oct 2026 | Sands of Time results after each trail win, trail completion screens, campaign missions wait for the advisor before the mission-over screen, "New game files available" downloads only what's missing |
+| [0.6.0](https://github.com/YannickAaron/Strong-Hold/releases/tag/v0.6.0) | 22 Oct 2026 | Advisor and lord videos over the minimap, full-screen win/lose videos, victory and defeat speech, building sketches, tutorial arrows, building tooltips, the original on-screen texts, multiplayer chat with insults |
+| [0.5.0](https://github.com/YannickAaron/Strong-Hold/releases/tag/v0.5.0) | 22 Oct 2026 | Map Editor part 1: map size and type, shape the land, water, trees, rocks, animals; save and load; your maps in the Sandbox |
+| [0.4.0](https://github.com/YannickAaron/Strong-Hold/releases/tag/v0.4.0) | 21 Oct 2026 | Your colour everywhere, Allies panel, Free Build events and powers, control groups, Advanced Skirmish Options, exact projectile maths so LAN games stay in sync |
+| [0.3.0](https://github.com/YannickAaron/Strong-Hold/releases/tag/v0.3.0) | 21 Oct 2026 | In-game Help, score screen, every building panel, market price list and auto trading, the original hotkeys, save dialog, credits, display modes and many options |
+| [0.2.0](https://github.com/YannickAaron/Strong-Hold/releases/tag/v0.2.0) | 21 Oct 2026 | New name *Strong Hold*. Crusader Trail, all historical campaign missions, Reports, full troop orders, original camera, LAN chat, pause, saves and co-op trail, menu and mission sounds |
+| [0.1.1](https://github.com/YannickAaron/Strong-Hold/releases/tag/v0.1.1) | 21 Oct 2026 | "New version available" notice on the main menu, co-op ally castles, AI siege and squads, tutorial |
+| [0.1.0](https://github.com/YannickAaron/Strong-Hold/releases/tag/v0.1.0) | 20 Oct 2026 | First release as *Stronghold Crusader (Rust)*: the native engine, first-start setup (your copy from CrossOver/Steam, a folder, or a Steam download), skirmish, campaigns, sandbox, LAN |
 
 Something wrong? [Open an issue](https://github.com/YannickAaron/Strong-Hold/issues) and attach
 `~/Library/Logs/Strong Hold.log`.
