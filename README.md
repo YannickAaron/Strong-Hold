@@ -64,7 +64,8 @@ passed to it once and never saved. The game's files go to `~/Library/Application
 
 **Files:** the app writes only to `~/Library/Application Support/Strong Hold` (your copy of the game, the prepared
 assets, settings, saves, maps) and `~/Library/Logs/Strong Hold.log`. A copy of the game in CrossOver is only read
-(its saves show up in Load Game too, and deleting one there deletes it). To uninstall, drag the app to the Bin and delete that folder.
+(its saves show up in Load Game too, and deleting one there deletes it), and so are its CustomLords folder and, if
+installed through Steam, Stronghold Crusader 2 (its Sassanid Knight is prepared from it into the folder above). To uninstall, drag the app to the Bin and delete that folder.
 
 **Other programs** it starts: DepotDownloader (Steam download), macOS's `curl` (update check), `open` (when you click to
 show a folder or the releases page).
@@ -76,7 +77,7 @@ no network or file code), and every release's SHA-256 and VirusTotal scan.
 
 | | |
 |---|---|
-| **Single player** | Skirmish against AI lords (Advanced Skirmish Options, Extreme, King of the Hill), the historical campaigns with story pages, the Crusader Trail with Sands of Time, ranks, Customize, Skirmish Masters and custom trails, the tutorial, Free Build with events and powers |
+| **Single player** | Skirmish against AI lords (Advanced Skirmish Options, Extreme, King of the Hill, your own lords from the game's CustomLords folder), the historical campaigns with story pages, the Crusader Trail with Sands of Time, ranks, Customize, Skirmish Masters and custom trails, the tutorial, Free Build with events and powers |
 | **Multiplayer** | Local network (LAN) games, King of the Hill, co-op Crusader Trail, chat to chosen players or teams, insults, pause, game speed for everyone, multiplayer saves |
 | **Map Editor** | Shape the land (heights, ground types, water, trees, rocks, animals), place keeps, buildings, walls and troops, starting goods; your maps play in Custom Skirmish and Sandbox |
 | **Your lord** | Player name, colour and coat of arms editor, shown on troops, flags, lobby, trails and score screens |
@@ -93,6 +94,7 @@ game files, settings and saves stay.
 
 | Version | Date | What's new |
 |---|---|---|
+| [0.11.0](https://github.com/YannickAaron/Strong-Hold/releases/tag/v0.11.0) | 23 Oct 2026 | Custom AI lords: lords from the game's CustomLords / CustomMedia folders join skirmishes with their own face, voice and videos. Click one unit out of a selected group to command it alone; click a troop type in the troops panel to keep only that type, right-click it to drop it |
 | [0.10.0](https://github.com/YannickAaron/Strong-Hold/releases/tag/v0.10.0) | 23 Oct 2026 | King of the Hill: a new skirmish and LAN mode with a guarded tower on the hill to conquer and hold, and AI lords that fight for it. Buttons, checkboxes, panels and text boxes in the game's own red-and-gold look. For King of the Hill over LAN everyone needs 0.10.0 |
 | [0.9.0](https://github.com/YannickAaron/Strong-Hold/releases/tag/v0.9.0) | 23 Oct 2026 | Change the game speed during LAN games and co-op missions (+ / − keys or Options): it changes for every player (everyone needs 0.9.0) |
 | [0.8.1](https://github.com/YannickAaron/Strong-Hold/releases/tag/v0.8.1) | 22 Oct 2026 | No more shell script inside the app (one virus scanner mistook it for a trojan), the source code of everything except the simulation is public, and a page on what the app does on your Mac |

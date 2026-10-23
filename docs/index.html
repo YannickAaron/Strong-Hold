@@ -169,7 +169,7 @@
     <div class="two" style="margin-top:26px">
       <div>
         <h3>Files</h3>
-        <p class="lead">The app writes only to <code>~/Library/Application Support/Strong Hold</code> (your copy of the game, the prepared assets, settings, saves, maps) and <code>~/Library/Logs/Strong Hold.log</code>. A copy of the game in CrossOver is only read (its saves show up in Load Game too, and deleting one there deletes it). To uninstall, drag the app to the Bin and delete that folder.</p>
+        <p class="lead">The app writes only to <code>~/Library/Application Support/Strong Hold</code> (your copy of the game, the prepared assets, settings, saves, maps) and <code>~/Library/Logs/Strong Hold.log</code>. A copy of the game in CrossOver is only read (its saves show up in Load Game too, and deleting one there deletes it), and so are its CustomLords folder and, if installed through Steam, Stronghold Crusader 2 (its Sassanid Knight is prepared from it into the folder above). To uninstall, drag the app to the Bin and delete that folder.</p>
         <p class="lead">Other programs it starts: DepotDownloader for the Steam download, macOS's <code>curl</code> for the update check, <code>open</code> when you click to show a folder or the releases page.</p>
       </div>
       <div>
@@ -189,7 +189,7 @@
     <h2>What it supports</h2>
     <p class="lead">The whole game, natively. The port is in active development; parts of the simulation are still being verified against the original. Not yet: online multiplayer and Intel Macs.</p>
     <div class="feat">
-      <div><h3>Single player</h3><p>Skirmish against AI lords with Advanced Skirmish Options and Extreme, King of the Hill, the historical campaigns, the Crusader Trail with Sands of Time, ranks, Customize, Skirmish Masters and custom trails, the tutorial, Free Build with events and powers.</p></div>
+      <div><h3>Single player</h3><p>Skirmish against AI lords with Advanced Skirmish Options and Extreme, your own lords from the game's CustomLords folder, King of the Hill, the historical campaigns, the Crusader Trail with Sands of Time, ranks, Customize, Skirmish Masters and custom trails, the tutorial, Free Build with events and powers.</p></div>
       <div><h3>Multiplayer</h3><p>Local network games, King of the Hill, co-op Crusader Trail, chat to chosen players or teams, the insults, pause, game speed for everyone and multiplayer saves.</p></div>
       <div><h3>Map Editor</h3><p>Shape the land, water, trees, rocks and animals, then place keeps, buildings, walls, troops and starting goods. Your maps play in Custom Skirmish and the Sandbox.</p></div>
       <div><h3>Your lord</h3><p>Player name, colour and the coat of arms editor, shown on troops, flags, the lobby, trails and score screens.</p></div>
@@ -205,6 +205,7 @@
     <h2>Releases</h2>
     <p class="lead">A new version every few days. The app tells you when one is out: download the new DMG and drag it over the old app; your game files, settings and saves stay. <a href="https://github.com/YannickAaron/Strong-Hold/releases">Every release on GitHub</a>.</p>
     <ul class="rel">
+      <li><b><a href="https://github.com/YannickAaron/Strong-Hold/releases/tag/v0.11.0" style="color:inherit;text-decoration:none">0.11.0</a></b><span class="d">23 Oct 2026</span><p>Custom AI lords: lords from the game's CustomLords and CustomMedia folders join skirmishes with their own face, voice and videos. Click one unit out of a selected group to command it alone; in the troops panel, click a troop type to keep only that type, or right-click it to drop it from the selection.</p></li>
       <li><b><a href="https://github.com/YannickAaron/Strong-Hold/releases/tag/v0.10.0" style="color:inherit;text-decoration:none">0.10.0</a></b><span class="d">23 Oct 2026</span><p>King of the Hill, a new skirmish and LAN mode: kill the guards of the tower on the hill, hold it alone to make it yours, and score while you keep it: first to the target wins. AI lords fight for the hill too. Buttons, checkboxes, panels and text boxes now use the game's own red-and-gold look. For King of the Hill over LAN, everyone needs 0.10.0.</p></li>
       <li><b><a href="https://github.com/YannickAaron/Strong-Hold/releases/tag/v0.9.0" style="color:inherit;text-decoration:none">0.9.0</a></b><span class="d">23 Oct 2026</span><p>Change the game speed during LAN games and co-op missions with the + and − keys or in Options: it changes for every player. Everyone in a LAN game needs 0.9.0.</p></li>
       <li><b><a href="https://github.com/YannickAaron/Strong-Hold/releases/tag/v0.8.1" style="color:inherit;text-decoration:none">0.8.1</a></b><span class="d">22 Oct 2026</span><p>No more shell script inside the app (one virus scanner mistook it for a trojan), the source code of everything except the simulation is public, and a page on what the app does on your Mac.</p></li>
