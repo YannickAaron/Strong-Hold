@@ -94,6 +94,7 @@ game files, settings and saves stay.
 
 | Version | Date | What's new |
 |---|---|---|
+| [0.12.3](https://github.com/YannickAaron/Strong-Hold/releases/tag/v0.12.3) | 23 Oct 2026 | Pressing a build hotkey the game refuses (walls without stone) no longer shows a red outline with a "Not ported in the sim yet" note at the cursor |
 | [0.12.2](https://github.com/YannickAaron/Strong-Hold/releases/tag/v0.12.2) | 23 Oct 2026 | Knights and other horses ride smoothly, also in big armies: no more stop-and-go on every step, no jumping back in a crowd, and they keep gliding when a large battle slows the game down |
 | [0.12.1](https://github.com/YannickAaron/Strong-Hold/releases/tag/v0.12.1) | 23 Oct 2026 | Importing a lord from a .zip in Add AI now opens his story page right away and plays his story video when he brings one. Custom lords can bring a full-screen story video ("Watch his story" on their page). A custom lord's keep, scores and stats now show his own name instead of the Rat's. A first custom lord to try, Lord David von Lindschied, is attached to the release as a .zip |
 | [0.12.0](https://github.com/YannickAaron/Strong-Hold/releases/tag/v0.12.0) | 23 Oct 2026 | Custom lords join the Add AI faces next to the built-in lords: a red (!) on a face opens his story page, and one Import tile adds a lord from a .zip. Custom lords work in LAN games and can bring their own figure on the map. Horses no longer jerk backwards while they run. The floating gold and popularity numbers over keeps and houses show their icon and number again instead of an empty scroll |
