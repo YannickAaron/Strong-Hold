@@ -94,6 +94,7 @@ game files, settings and saves stay.
 
 | Version | Date | What's new |
 |---|---|---|
+| [0.11.1](https://github.com/YannickAaron/Strong-Hold/releases/tag/v0.11.1) | 23 Oct 2026 | Troops walking behind buildings now go behind them, the right-click menu no longer opens when you order your lord with the modern controls, and the move / attack cursor is the original's size on Retina screens |
 | [0.11.0](https://github.com/YannickAaron/Strong-Hold/releases/tag/v0.11.0) | 23 Oct 2026 | Custom AI lords: lords from the game's CustomLords / CustomMedia folders join skirmishes with their own face, voice and videos. Click one unit out of a selected group to command it alone; click a troop type in the troops panel to keep only that type, right-click it to drop it |
 | [0.10.0](https://github.com/YannickAaron/Strong-Hold/releases/tag/v0.10.0) | 23 Oct 2026 | King of the Hill: a new skirmish and LAN mode with a guarded tower on the hill to conquer and hold, and AI lords that fight for it. Buttons, checkboxes, panels and text boxes in the game's own red-and-gold look. For King of the Hill over LAN everyone needs 0.10.0 |
 | [0.9.0](https://github.com/YannickAaron/Strong-Hold/releases/tag/v0.9.0) | 23 Oct 2026 | Change the game speed during LAN games and co-op missions (+ / − keys or Options): it changes for every player (everyone needs 0.9.0) |
