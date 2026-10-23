@@ -63,8 +63,8 @@ passed to it once and never saved. The game's files go to `~/Library/Application
 **No telemetry**, no analytics, no ads, no account of ours.
 
 **Files:** the app writes only to `~/Library/Application Support/Strong Hold` (your copy of the game, the prepared
-assets, settings, saves, maps) and `~/Library/Logs/Strong Hold.log`. A copy of the game in CrossOver is only read
-(its saves show up in Load Game too, and deleting one there deletes it), and so is its CustomLords folder. To
+assets, settings, saves, maps, imported lords) and `~/Library/Logs/Strong Hold.log`. A copy of the game in CrossOver is only read
+(its saves show up in Load Game too, and deleting one there deletes it), and so is its CustomLords folder; a lord's .zip you import is only read. To
 uninstall, drag the app to the Bin and delete that folder.
 
 **Other programs** it starts: DepotDownloader (Steam download), macOS's `curl` (update check), `open` (when you click to
@@ -94,6 +94,7 @@ game files, settings and saves stay.
 
 | Version | Date | What's new |
 |---|---|---|
+| [0.12.1](https://github.com/YannickAaron/Strong-Hold/releases/tag/v0.12.1) | 23 Oct 2026 | Importing a lord from a .zip in Add AI now opens his story page right away and plays his story video when he brings one. Custom lords can bring a full-screen story video ("Watch his story" on their page). A custom lord's keep, scores and stats now show his own name instead of the Rat's. A first custom lord to try, Lord David von Lindschied, is attached to the release as a .zip |
 | [0.12.0](https://github.com/YannickAaron/Strong-Hold/releases/tag/v0.12.0) | 23 Oct 2026 | Custom lords join the Add AI faces next to the built-in lords: a red (!) on a face opens his story page, and one Import tile adds a lord from a .zip. Custom lords work in LAN games and can bring their own figure on the map. Horses no longer jerk backwards while they run. The floating gold and popularity numbers over keeps and houses show their icon and number again instead of an empty scroll |
 | [0.11.2](https://github.com/YannickAaron/Strong-Hold/releases/tag/v0.11.2) | 23 Oct 2026 | Troops standing just behind a building now stay behind it instead of being drawn over its roof; archers on keeps stand behind the battlements. The download is about 5 MB bigger: the art for the coming Sassanid Knight is already inside |
 | [0.11.1](https://github.com/YannickAaron/Strong-Hold/releases/tag/v0.11.1) | 23 Oct 2026 | Troops walking behind buildings now go behind them, the right-click menu no longer opens when you order your lord with the modern controls, and the move / attack cursor is the original's size on Retina screens |
