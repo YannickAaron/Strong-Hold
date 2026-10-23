@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Lord David von Lindschied</title>
+<meta name="description" content="A custom AI lord for Strong Hold: the Cold Rooster of the Rhineland. Story, trailer and download.">
+<meta property="og:title" content="Lord David von Lindschied">
+<meta property="og:description" content="The Cold Rooster of the Rhineland: a custom AI lord for Strong Hold.">
+<meta property="og:image" content="hero.jpg">
+<link rel="icon" href="face.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #1f160e; --bg2: #2a1e13; --gold: #dbb562; --gold2: #f0d79a;
+    --text: #ece0c4; --dim: #b8a78a; --crimson: #8c1f17; --crimson2: #a8291f; --line: #5a4228;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 17px/1.65 "Libre Baskerville", Baskerville, Georgia, serif; }
+  a { color: var(--gold2); }
+  h1, h2, h3 { font-family: Cinzel, Copperplate, "Trajan Pro", serif; color: var(--gold); letter-spacing: .04em; font-weight: 700; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 16px; }
+
+  header.hero { position: relative; min-height: 82vh; display: flex; align-items: flex-end; background: #000 url(hero.jpg) 50% 20% / cover no-repeat; }
+  header.hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, #0007 0%, #0002 40%, var(--bg) 100%); }
+  .hero .wrap { position: relative; z-index: 1; padding-bottom: 44px; width: 100%; }
+  .hero .arms { width: 88px; height: 88px; float: right; filter: drop-shadow(0 4px 14px #000); }
+  .hero h1 { font-size: clamp(32px, 6vw, 64px); line-height: 1.05; margin: 0 0 6px; text-shadow: 0 2px 18px #000; }
+  .hero .sub { font-style: italic; font-size: clamp(17px, 2.2vw, 22px); text-shadow: 0 1px 10px #000; margin: 0 0 24px; }
+  .btn { display: inline-block; padding: 12px 22px; border-radius: 8px; font: 700 16px/1 "Libre Baskerville", serif; text-decoration: none; margin: 0 10px 10px 0; }
+  .btn.primary { background: var(--crimson); color: #fff; border: 1px solid var(--crimson2); box-shadow: 0 4px 18px #0007; }
+  .btn.primary:hover { background: var(--crimson2); }
+  .btn.ghost { color: var(--gold2); border: 1px solid var(--gold); background: #0006; }
+  .meta { color: var(--dim); font-size: 14px; }
+
+  section { padding: 52px 0; border-top: 1px solid var(--line); }
+  section h2 { font-size: 30px; margin: 0 0 18px; }
+  video { width: 100%; display: block; border-radius: 10px; border: 1px solid var(--line); box-shadow: 0 10px 40px #000a; background: #000; }
+  .story { display: grid; grid-template-columns: 1fr 320px; gap: 36px; align-items: start; }
+  .story p { margin: 0 0 16px; max-width: 640px; }
+  .story p:first-child::first-letter { font: 700 3.1em/0.9 Cinzel, serif; float: left; margin: 6px 8px 0 0; color: var(--gold); }
+  .story figure { margin: 0; }
+  .story img { width: 100%; display: block; border-radius: 10px; border: 1px solid var(--line); box-shadow: 0 10px 40px #000a; }
+  figcaption { color: var(--dim); font-size: 14px; font-style: italic; margin-top: 8px; }
+  dl.glance { display: grid; grid-template-columns: 190px 1fr; gap: 12px 24px; margin: 0; }
+  dl.glance dt { font-family: Cinzel, serif; color: var(--gold); font-weight: 700; }
+  dl.glance dd { margin: 0; }
+  blockquote { margin: 26px 0 0; padding: 18px 22px; border-left: 3px solid var(--crimson2); background: var(--bg2); font-style: italic; font-size: 20px; border-radius: 0 10px 10px 0; }
+  .steps { display: grid; gap: 18px; max-width: 640px; }
+  .step { background: var(--bg2); border: 1px solid var(--line); border-radius: 12px; padding: 20px; }
+  .step h3 { margin: 0 0 10px; font-size: 19px; }
+  .step ol { margin: 0; padding-left: 20px; color: var(--text); font-size: 15px; }
+  .step li { margin: 5px 0; }
+  .step p { margin: 10px 0 0; color: var(--dim); font-size: 14px; }
+  code { background: #0005; padding: 2px 6px; border-radius: 4px; font-size: 13px; color: var(--gold2); word-break: break-all; }
+  footer { border-top: 1px solid var(--line); padding: 30px 0 50px; color: var(--dim); font-size: 13px; }
+  .clip-cap { color: var(--dim); font-size: 14px; font-style: italic; margin-top: 10px; }
+
+  /* the road east: a parchment map on a tilted card */
+  .road-sec { overflow: hidden; } /* the tilted card reaches past the window edge */
+  .stage { perspective: 1600px; margin: 10px 0 0; }
+  .card { position: relative; border-radius: 14px; padding: 14px; background: linear-gradient(160deg, #6b4a26, #3d2914); box-shadow: 0 40px 70px -20px #000d, 0 0 0 1px #8a6a3a inset;
+    transform: rotateX(18deg) rotateY(var(--ry, -6deg)) rotateX(var(--rx, 0deg)); transform-style: preserve-3d; transition: transform .25s ease-out; }
+  .card::after { content: ""; position: absolute; left: 6%; right: 6%; bottom: -46px; height: 40px; background: radial-gradient(closest-side, #000a, transparent); transform: translateZ(-60px); filter: blur(6px); }
+  .route-map { display: block; width: 100%; height: auto; border-radius: 8px; transform: translateZ(18px); }
+  .route-map .sea { fill: #9aa49a; }
+  .route-map .land { fill: #e2cfa2; stroke: #6f5530; stroke-width: 1.4; stroke-linejoin: round; }
+  .route-map .sea-name { font: italic 22px "Libre Baskerville", serif; fill: #5d6a62; letter-spacing: .12em; }
+  .route-map .road-under { fill: none; stroke: #f3e6c4; stroke-width: 9; stroke-linecap: round; opacity: .7; }
+  .route-map .road { fill: none; stroke: var(--crimson2); stroke-width: 4.5; stroke-linecap: round; stroke-dasharray: 1; stroke-dashoffset: 1; }
+  .route-map.drawn .road { stroke-dashoffset: 0; transition: stroke-dashoffset 4.5s cubic-bezier(.45, .05, .35, 1); }
+  .route-map .pin { fill: var(--crimson); stroke: #f0d79a; stroke-width: 2.5; }
+  .route-map .dot { fill: #6f5530; }
+  .route-map .place { font: 700 19px Cinzel, serif; fill: #2b1c0e; paint-order: stroke; stroke: #e9d8ad; stroke-width: 5px; stroke-linejoin: round; }
+  .route-map .place:not(.key) { font-size: 15px; fill: #5a4228; }
+  .route-map .when { font: italic 14px "Libre Baskerville", serif; fill: #6b1912; }
+  .route-map .compass circle { fill: #e9d8ad99; stroke: #6f5530; stroke-width: 1.5; }
+  .route-map .compass path { fill: #6f5530; } .route-map .compass .n { fill: var(--crimson2); }
+  .route-map .compass text { font: 700 16px Cinzel, serif; fill: #2b1c0e; }
+  ol.road-list { columns: 2; column-gap: 36px; margin: 46px 0 0; padding-left: 22px; color: var(--dim); font-size: 15px; }
+  ol.road-list li { break-inside: avoid; margin: 0 0 10px; } ol.road-list b { color: var(--text); font-weight: 700; }
+  @media (prefers-reduced-motion: reduce) { .card { transition: none; } .route-map .road { stroke-dashoffset: 0; } .route-map.drawn .road { transition: none; } }
+  @media (max-width: 760px) {
+    .story { grid-template-columns: 1fr; }
+    dl.glance { grid-template-columns: 1fr; gap: 2px; }
+    dl.glance dd { margin-bottom: 12px; }
+    .hero .arms { width: 60px; height: 60px; }
+    .card { transform: rotateX(10deg); padding: 8px; }
+    ol.road-list { columns: 1; }
+    .route-map .place:not(.key) { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <img class="arms" src="arms.png" alt="The Lindschied arms: a black rooster on gold">
+    <h1>Lord David von Lindschied</h1>
+    <p class="sub">The Cold Rooster of the Rhineland. A custom AI lord for Strong Hold.</p>
+    <a class="btn primary" href="Lord-David-von-Lindschied.zip" download>Download the lord (.zip, 34 MB)</a>
+    <a class="btn ghost" href="#trailer">Watch his story</a>
+    <div class="meta">For <a href="../">Strong Hold</a> 0.12.0 or newer, the Mac engine for Stronghold Crusader.</div>
+  </div>
+</header>
+
+<section id="trailer">
+  <div class="wrap">
+    <h2>His story</h2>
+    <video controls preload="metadata" poster="poster.jpg" playsinline>
+      <source src="trailer.mp4" type="video/mp4">
+    </video>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>On the field</h2>
+    <video controls muted loop playsinline preload="metadata" poster="in-game.jpg">
+      <source src="in-game.mp4" type="video/mp4">
+    </video>
+    <p class="clip-cap">In the game: three swordsmen climb onto his keep, and Lord David meets them with the sword while his own men come running. His own figure comes with the zip.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap story">
+    <div>
+      <p>A minor knight of the Rhineland, second son of a small house in Lindschied, church land of Mainz in the Taunus hills. A second son inherits nothing, so he took the cross and rode east with Barbarossa.</p>
+      <p>He lived through the emperor's death in the river and the long march to Acre, and somewhere on that road he stopped praying. God is the excuse; land is the goal. Now he carves a new Lindschied out of the desert, under a black rooster on gold.</p>
+      <p>His own people eat first: low taxes, full rations, churches and ale. They love him for it.</p>
+      <p>His enemies get nothing. No prisoners, no mercy for those who run. He burns the farms and lets hunger open the gates. He never shouts. He calls you "Kleiner". The calm is the threat.</p>
+    </div>
+    <figure>
+      <img src="portrait.jpg" alt="Lord David von Lindschied in black and gold, a long sword at his shoulder" loading="lazy">
+      <figcaption>Lord David von Lindschied, 1190s.</figcaption>
+    </figure>
+  </div>
+</section>
+
+
+<section class="road-sec">
+  <div class="wrap">
+    <h2>The road east</h2>
+    <p style="max-width:720px;margin:0 0 26px">From a village in the Taunus hills to the walls of Acre: some 3,500 km on foot and horseback with Barbarossa's host, 1189 to 1191.</p>
+    <div class="stage"><div class="card" id="card">
+<svg class="route-map" viewBox="0 0 1000 843" role="img" aria-labelledby="route-title">
+<title id="route-title">His road: Lindschied, Regensburg, Vienna, Belgrade, Adrianople, Gallipoli, Iconium, the River Saleph, Antioch, Acre</title>
+<defs><filter id="ink" filterUnits="userSpaceOnUse" x="0" y="0" width="1000" height="843"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="2.2"/></filter>
+<radialGradient id="vig" cx="50%" cy="45%" r="75%"><stop offset="60%" stop-color="#000" stop-opacity="0"/><stop offset="100%" stop-color="#3a2410" stop-opacity=".55"/></radialGradient></defs>
+<rect width="100%" height="100%" class="sea"/>
+<path class="land" filter="url(#ink)" d="M575,631L577,631L579,631L581,629L583,629L584,631L582,632L584,634L586,634L586,636L588,637L591,637L593,637L595,636L598,635L605,636L608,638L613,638L618,639L620,638L625,638L625,644L626,646L629,644L632,642L636,642L639,639L639,644L638,647L638,648L636,649L633,650L627,649L621,650L611,651L600,652L599,650L598,647L594,646L591,644L579,642L576,641L571,642L569,642L567,640L567,635L568,631L570,632L571,631L571,629L572,627L574,631L575,631ZM564,511L565,515L566,516L569,518L576,521L582,521L583,524L584,526L584,528L585,533L586,537L588,539L591,539L594,539L594,544L593,545L591,545L590,544L587,542L585,540L584,537L583,536L582,533L580,531L576,531L573,531L570,529L569,525L567,524L566,523L565,522L562,519L559,516L556,515L553,514L551,515L549,514L552,512L556,509L559,508L564,511ZM854,629L841,640L840,643L840,645L842,648L843,650L840,651L837,651L836,651L834,651L829,657L827,659L824,660L820,661L819,661L816,663L816,665L814,665L814,663L809,662L803,660L801,660L800,658L798,652L797,647L800,648L802,647L804,645L807,644L810,644L813,644L814,640L814,636L819,637L824,638L828,638L832,638L844,633L847,631L849,630L853,628L857,627L854,629ZM30,482L33,483L35,482L38,483L38,485L37,487L36,490L34,493L33,496L30,498L28,499L24,497L21,496L20,492L17,490L15,491L13,493L12,491L10,491L10,488L21,479L24,478L31,475L31,477L31,479L30,482ZM201,443L202,446L205,455L205,457L205,459L201,465L202,469L203,471L203,474L202,477L200,497L200,501L199,504L197,505L194,504L191,502L188,503L186,501L185,508L183,511L181,513L179,513L177,512L175,512L174,511L172,508L171,506L169,502L169,499L168,493L170,490L170,487L170,484L171,484L172,482L172,480L171,478L169,477L168,475L169,473L170,472L170,470L170,464L169,462L168,459L167,457L166,455L164,453L163,451L163,447L163,444L164,442L166,444L170,445L173,444L176,443L180,441L184,435L187,434L189,433L189,431L192,432L193,432L196,434L197,435L198,437L200,439L199,442L201,443ZM197,376L196,381L198,384L199,398L195,405L195,407L195,414L194,415L193,417L191,423L189,426L184,422L181,421L180,420L180,417L181,416L178,413L177,412L178,409L177,407L176,407L174,405L176,403L176,401L175,400L173,398L173,396L174,395L176,394L174,392L173,392L175,389L177,385L179,383L184,381L187,379L188,378L191,379L193,379L193,377L193,375L193,371L194,368L196,370L197,374L197,376ZM357,537L355,541L355,542L348,552L348,554L347,557L346,559L346,561L345,564L345,567L346,569L348,571L347,572L348,575L350,576L350,579L347,582L346,584L345,585L345,587L345,589L345,591L342,590L339,589L336,590L332,588L329,587L325,581L323,578L320,576L316,576L313,576L311,575L305,571L299,567L296,565L295,564L294,563L291,562L287,560L283,560L280,559L277,556L275,553L275,551L276,547L278,543L279,542L281,541L282,540L283,538L286,542L287,543L291,542L291,540L294,538L297,538L299,538L300,540L302,541L307,545L310,545L314,544L317,543L323,544L327,543L329,543L333,542L335,539L338,539L342,539L345,539L347,539L348,537L349,537L351,537L355,534L357,534L359,535L357,537ZM1000,0L1000,843L868,843L868,841L866,843L809,843L806,833L804,827L802,828L802,831L800,835L799,839L800,842L0,843L0,595L9,593L16,594L22,589L26,587L40,587L47,583L73,583L76,585L79,587L84,591L87,592L90,591L98,587L107,585L112,582L114,578L118,577L120,580L130,583L135,582L138,581L137,577L143,578L148,580L152,584L156,585L161,583L173,582L180,580L186,574L188,573L202,568L204,568L206,569L206,571L205,572L206,575L208,573L207,571L210,571L213,571L216,572L216,579L219,585L218,587L221,589L224,587L226,584L231,582L236,578L238,577L239,581L240,584L238,585L236,589L232,598L227,600L224,604L223,606L223,609L224,614L226,619L229,622L231,623L237,628L237,631L238,634L238,638L240,642L236,649L233,654L229,661L225,666L216,673L214,675L212,678L212,680L212,683L215,690L219,695L222,697L229,696L229,699L230,702L232,702L234,702L236,698L239,701L241,707L244,709L242,712L246,713L247,712L250,714L254,716L258,717L271,725L274,726L283,727L293,724L297,723L304,726L307,727L311,728L320,730L322,732L327,736L329,737L347,742L349,745L352,750L352,756L353,761L355,768L358,772L361,776L364,778L372,781L380,783L389,783L404,788L417,793L420,796L426,798L439,811L446,816L451,816L455,816L463,811L466,809L474,798L477,792L478,788L477,784L476,780L474,776L473,771L472,762L473,755L475,752L477,748L483,740L490,735L502,728L508,728L511,727L517,722L519,722L522,724L531,723L535,724L540,728L546,729L550,731L555,734L556,740L556,741L555,744L560,748L574,750L576,751L580,754L582,755L592,756L597,755L602,756L604,757L606,760L608,766L609,768L611,772L615,773L629,769L644,773L652,774L664,777L672,783L674,784L680,784L683,787L698,789L705,793L710,796L712,797L715,796L718,795L722,793L726,790L735,783L738,781L740,782L743,781L744,779L745,778L746,776L747,775L752,774L761,771L760,772L752,776L755,776L759,775L763,774L764,773L765,770L768,770L777,774L779,775L785,772L788,773L793,779L791,778L787,774L786,776L783,780L787,782L790,783L791,785L792,787L795,786L797,784L796,782L795,780L798,782L803,787L805,788L807,788L812,786L819,785L820,786L821,788L826,786L833,786L840,784L847,780L852,774L855,770L860,759L863,749L866,734L869,726L870,721L871,717L873,715L874,711L875,707L877,703L882,689L885,684L886,676L890,670L893,668L894,666L894,663L892,655L892,652L892,648L893,642L893,640L893,638L892,635L889,630L891,620L892,618L894,615L892,609L890,604L892,601L896,597L900,592L900,589L899,587L898,585L896,583L892,585L889,588L888,588L886,589L885,592L883,594L879,595L873,593L867,589L863,587L861,586L858,587L850,594L843,603L841,605L834,608L830,610L827,610L818,611L814,612L810,614L804,611L799,608L797,605L793,599L790,596L784,593L772,587L769,586L762,585L754,584L752,587L752,596L750,599L750,604L749,605L747,606L745,605L743,604L739,606L731,609L729,609L720,606L716,603L714,601L714,597L712,594L712,592L712,591L710,590L708,591L706,591L703,590L697,587L692,586L689,591L687,592L685,593L686,588L679,589L675,591L672,591L670,590L673,588L675,587L682,586L684,586L686,583L690,580L688,579L675,580L667,579L665,581L664,577L666,575L668,575L672,574L672,571L668,569L666,567L664,566L663,562L662,559L660,557L664,554L665,549L664,545L662,545L656,542L655,543L653,540L650,538L648,538L645,539L643,537L640,536L639,535L641,532L643,532L643,529L641,525L642,523L643,522L645,522L647,525L648,528L647,530L648,532L650,530L652,531L654,532L661,530L662,529L657,529L655,528L654,525L653,523L652,520L655,517L658,513L656,512L653,511L653,509L654,507L654,505L650,500L650,498L653,495L656,491L653,490L644,491L641,492L635,493L634,491L634,489L636,486L635,479L636,475L640,473L644,467L651,460L658,460L661,458L665,458L666,460L670,463L677,463L679,462L680,461L677,457L681,456L684,457L683,459L682,461L692,460L701,461L704,461L711,461L712,459L710,458L708,457L705,456L709,452L712,452L724,449L733,448L720,446L717,445L714,441L712,439L712,436L713,433L714,431L719,431L735,434L746,432L758,436L770,435L772,434L775,428L792,418L797,414L804,411L814,408L823,404L826,403L847,405L862,406L869,402L873,403L871,406L872,408L874,411L876,414L883,417L893,414L896,415L899,424L902,427L905,430L908,430L910,428L912,427L915,426L921,430L923,433L932,435L941,436L945,439L957,442L962,441L970,439L985,435L995,440L998,440L1000,440L1000,355L997,352L987,343L982,337L966,324L964,323L956,321L952,319L943,309L940,311L936,310L934,309L932,308L930,306L929,302L926,300L920,296L912,294L911,292L918,290L920,288L916,287L914,286L916,284L918,284L920,285L924,288L927,289L928,288L938,285L939,284L939,281L937,281L937,279L939,276L943,271L946,263L948,262L949,263L949,265L951,263L952,260L956,260L958,261L960,260L956,255L949,250L947,250L945,249L942,245L941,241L944,241L947,242L952,239L953,239L956,240L961,240L960,238L959,235L964,233L968,232L977,228L981,227L981,225L980,221L979,219L974,219L972,222L965,223L962,223L964,221L967,220L963,220L960,222L953,225L943,225L935,226L930,231L927,231L922,233L919,235L916,238L913,237L909,237L906,238L902,240L900,241L895,240L890,242L879,250L875,256L874,258L872,259L870,260L874,255L876,254L876,250L875,248L870,254L868,255L864,257L864,261L865,264L866,268L869,274L875,283L878,286L880,288L883,288L888,285L890,285L895,286L897,284L899,283L902,283L906,283L910,285L908,288L907,291L906,293L905,296L901,298L896,298L891,298L890,297L886,295L883,294L881,295L878,299L873,302L871,306L865,305L861,305L854,308L850,315L844,319L840,320L836,320L833,319L828,314L829,312L830,310L832,302L832,299L830,295L826,292L823,293L821,292L814,286L810,286L806,287L804,286L803,284L811,278L820,272L823,272L828,269L833,265L833,262L831,260L829,261L827,262L823,259L821,257L814,259L810,259L802,261L798,259L790,254L788,253L785,254L784,252L785,251L787,251L789,251L790,248L786,247L782,247L780,246L778,244L782,244L786,245L793,246L799,247L801,245L804,243L799,244L793,243L791,241L789,239L788,236L788,233L788,229L786,225L785,223L783,221L785,225L786,228L787,231L787,238L786,241L784,241L780,241L777,240L778,236L776,238L774,241L772,242L767,242L758,244L757,247L756,251L754,253L750,260L743,268L737,271L734,272L732,273L729,272L727,273L726,278L728,280L730,287L729,290L729,292L727,299L726,302L725,304L712,307L713,306L712,303L712,301L713,300L710,299L709,300L708,302L709,305L707,307L706,311L705,314L708,314L707,316L703,321L701,323L702,334L700,341L700,343L699,351L696,355L693,354L688,355L685,359L684,361L682,362L681,368L681,378L679,379L678,379L671,388L675,390L677,392L680,397L684,402L685,405L684,409L686,414L689,420L693,423L709,430L712,431L711,434L710,437L709,439L705,440L692,437L689,436L686,437L682,440L678,439L671,440L669,445L665,450L657,455L652,457L644,465L640,470L639,471L637,472L637,469L638,467L638,463L641,461L643,459L651,455L652,452L647,452L641,453L637,453L634,453L633,450L633,449L632,447L628,445L618,443L614,441L612,442L608,439L605,440L600,444L597,444L594,441L592,441L589,442L585,447L581,449L578,448L573,448L572,451L573,452L576,455L574,457L575,460L577,460L580,460L585,463L587,466L588,469L585,467L583,465L580,464L577,462L574,461L572,463L574,467L577,469L578,470L579,473L578,476L575,474L570,466L564,465L563,467L564,470L565,472L570,476L569,477L563,475L561,471L561,467L555,464L550,460L549,457L550,456L551,454L548,454L546,456L543,457L543,459L543,461L542,465L541,470L542,473L548,481L551,487L552,490L555,492L559,497L560,499L561,503L558,506L557,506L557,502L557,500L552,498L551,499L548,500L550,504L551,506L552,508L554,508L551,511L547,513L544,513L542,513L543,515L547,516L553,519L556,521L559,521L562,526L568,527L571,532L575,533L578,535L579,537L580,540L580,546L581,551L580,555L578,556L576,552L572,549L568,544L566,543L564,545L558,546L555,548L554,549L555,550L556,552L556,555L558,558L560,559L562,559L563,561L565,562L565,564L559,567L557,568L555,567L555,564L553,563L551,562L549,561L547,559L545,561L546,566L549,570L553,579L554,585L555,588L554,592L556,596L557,599L554,598L552,596L548,591L547,587L545,587L542,587L539,595L539,599L538,598L536,597L536,592L536,590L532,584L531,583L530,581L528,579L527,579L525,580L525,584L525,587L524,589L519,585L515,577L515,573L518,569L518,566L515,561L511,557L509,556L508,553L505,551L504,550L504,547L508,544L511,538L514,539L517,538L520,535L522,533L525,533L533,538L541,541L545,543L547,545L551,546L550,544L550,543L551,542L556,542L557,540L557,538L555,538L553,537L551,538L548,536L547,535L542,532L537,529L536,531L535,532L532,532L525,530L521,532L519,532L517,532L515,533L512,533L510,530L509,528L509,530L508,532L505,532L503,531L502,527L500,522L497,517L494,516L494,514L494,512L497,512L502,514L504,512L504,510L503,508L501,509L498,508L494,509L492,508L489,504L486,501L482,498L479,490L476,487L474,485L474,481L473,479L470,473L460,467L458,464L457,462L456,460L458,461L459,460L459,458L456,453L457,447L459,442L459,435L460,431L459,428L459,424L460,419L462,418L463,417L463,412L460,409L456,409L452,406L451,402L445,395L438,391L438,389L436,389L430,386L425,382L416,376L410,375L401,370L396,368L398,368L401,368L414,374L412,373L410,371L403,365L398,362L392,355L384,353L379,350L376,350L372,351L370,351L368,351L367,349L367,346L364,343L359,340L355,337L347,328L345,325L347,324L350,324L352,324L355,324L352,322L349,320L342,313L339,309L339,305L340,300L338,296L332,291L330,288L326,287L324,287L323,289L322,293L318,299L317,301L315,304L313,305L309,299L306,295L306,293L305,291L303,282L305,280L306,280L308,278L310,277L306,272L304,272L302,274L295,272L294,272L293,274L290,276L287,277L283,280L279,281L276,282L275,282L277,280L272,281L270,283L270,286L269,290L271,291L274,297L277,300L276,302L275,304L273,306L272,305L270,308L271,319L274,326L276,329L281,334L287,337L297,345L303,347L304,349L308,355L311,363L314,374L316,380L321,386L330,395L339,402L347,406L353,407L367,406L370,407L373,408L373,411L372,413L369,415L366,417L366,421L369,424L383,431L397,437L402,440L407,445L420,451L422,455L430,461L433,467L434,471L432,475L431,478L430,481L427,480L423,477L418,465L407,463L405,462L401,460L400,457L396,456L393,458L390,463L386,470L382,479L382,483L384,487L390,489L395,493L398,496L398,505L399,510L397,512L393,512L388,513L385,516L383,519L383,527L383,530L376,536L372,542L371,544L370,547L361,547L359,543L359,538L361,535L364,534L366,528L365,523L367,521L368,520L370,519L374,518L374,512L371,509L370,505L369,497L365,487L362,479L360,475L358,472L352,473L350,472L341,466L340,463L342,461L341,458L340,455L338,452L336,451L332,452L328,452L326,453L328,449L324,446L320,445L318,446L317,444L312,435L309,431L307,430L304,431L299,429L296,429L294,429L292,431L290,429L286,425L280,423L269,411L265,406L258,401L254,394L250,391L245,389L242,390L240,389L242,388L241,385L235,378L232,376L231,374L230,372L227,370L224,370L224,367L225,364L224,362L222,356L219,351L217,339L215,336L212,333L203,330L192,323L189,322L182,319L178,319L172,322L166,329L160,337L158,338L151,341L145,342L139,344L136,346L128,354L124,356L123,360L120,362L118,363L113,364L108,366L106,365L100,365L97,363L90,361L87,357L84,357L82,357L81,355L78,354L77,354L75,355L71,356L69,355L63,353L59,352L57,351L56,349L54,348L50,349L49,351L47,353L33,362L31,366L28,372L27,375L29,383L32,388L33,391L34,394L32,395L30,398L32,400L33,406L30,409L26,412L8,423L4,428L2,429L0,430L0,88L12,85L14,84L25,79L32,75L36,75L38,74L42,74L45,75L50,75L53,74L56,75L59,74L56,74L53,72L48,73L45,72L42,72L40,71L38,69L40,68L46,67L50,68L56,72L58,72L60,71L57,70L55,68L53,67L57,66L56,64L51,59L53,55L55,53L58,51L63,46L65,42L67,37L70,24L71,22L73,20L75,20L81,19L88,14L91,10L93,8L102,4L107,3L115,3L120,2L127,2L129,4L131,6L133,7L137,8L136,6L133,4L134,1L161,0L163,2L165,0L171,0L171,4L172,0ZM324,614L322,614L321,613L323,612L324,614ZM265,588L262,587L261,586L264,586L264,588ZM103,1L98,2L96,2L102,1ZM82,7L77,9L80,7L82,7ZM88,4L85,4L90,2L94,2L88,4ZM386,369L390,370L394,370L397,370L399,371L397,372L394,371L391,373L388,372L386,370ZM400,364L398,365L386,365L383,364L379,362L382,361L386,361L387,363L396,364L400,364ZM389,359L385,359L381,359L380,358L380,355L384,356L390,357L392,358L389,359ZM790,256L793,258L790,258L782,256L778,254L777,253L777,250L779,253L780,254L790,256ZM680,617L678,618L677,616L678,612L677,610L678,607L679,605L682,603L689,600L690,600L690,602L688,608L686,610L687,613L683,613L680,617ZM662,634L662,636L661,634L661,632L660,629L662,625L662,622L664,621L663,625L662,628L663,630L664,633ZM658,581L656,582L656,579L655,577L657,578L658,579L658,581ZM657,589L657,588L659,585L664,583L667,584L663,586L659,588L657,589ZM620,581L617,582L616,580L615,577L619,573L621,574L621,578L620,581ZM613,577L610,580L609,580L609,576L611,575L612,577ZM618,601L617,603L615,602L616,601L616,599L618,600ZM615,591L613,590L613,587L616,590L615,591ZM653,551L657,552L659,553L659,555L657,555L654,557L651,555L648,555L648,552L651,551L653,551ZM632,561L634,557L637,557L640,556L639,558L637,560L632,561ZM628,587L626,587L627,586L630,584L632,582L633,583L631,584L628,587ZM644,594L642,595L640,597L639,596L639,594L640,595L641,592L644,594ZM588,560L587,561L586,559L587,556L589,557L588,560ZM590,568L589,569L589,566L589,564L592,565L590,568ZM593,588L593,590L588,592L588,590L590,590L593,588ZM604,562L604,566L603,564L603,562ZM605,553L604,555L602,553L600,551L599,549L598,548L597,546L599,545L601,548L604,548L604,550L605,552ZM612,559L611,561L609,561L607,558L605,556L608,557L611,558ZM598,582L597,581L597,579L599,582ZM634,537L632,539L629,536L630,534L631,532L631,530L628,527L628,524L632,523L634,525L635,528L636,534L634,536ZM642,498L642,500L646,503L647,506L647,508L646,507L646,510L644,510L642,510L636,509L634,507L638,504L636,503L634,506L629,505L628,503L629,499L632,499L634,499L636,498L641,496L642,498ZM573,505L572,507L570,506L568,502L573,505ZM576,504L576,502L578,500L577,502L576,504ZM597,516L594,517L594,515L591,513L591,511L594,511L594,514L597,516ZM623,459L620,460L617,457L620,456L622,457L623,459ZM617,475L615,478L615,481L612,481L612,478L611,480L609,480L607,480L607,478L607,475L611,474L613,476L614,475L617,473L617,475ZM599,453L596,454L592,452L594,447L598,447L599,449L599,451ZM631,470L625,471L623,470L625,467L628,466L631,468ZM244,659L240,661L241,659L244,656L244,659ZM236,695L234,696L231,695L230,694L230,690L235,689L237,691L237,694ZM76,15L73,18L72,17L72,14L76,11L76,15ZM221,374L222,376L222,379L219,377L216,378L214,378L214,376L217,375L220,375ZM171,507L169,511L167,508L167,506L169,506ZM165,438L165,439L165,436L166,435L166,437ZM60,480L52,476L49,476L49,473L54,472L59,473L61,477L60,480ZM331,620L327,621L325,619L325,616L328,616L330,619ZM348,332L345,331L344,329L348,332ZM337,299L334,300L332,299L329,297L328,296L330,293L331,291L332,292L334,296L337,299ZM338,307L338,309L336,307L334,307L333,305L336,304L338,307ZM347,322L345,321L343,320L342,319L340,317L339,315L336,310L338,312L342,315L345,319L348,321ZM347,337L339,329L339,328L341,330L347,337ZM352,335L354,337L352,337L350,335L349,333L352,335ZM329,311L327,310L326,307L324,302L325,299L323,294L325,293L326,296L326,298L328,300L328,303L328,308L329,311ZM411,377L414,379L404,376L406,376L411,377ZM490,531L490,535L492,536L494,540L494,542L490,540L487,541L487,539L486,537L484,538L484,533L486,533L488,531L488,529L490,531ZM497,551L500,555L498,554L495,556L492,554L490,551L492,547L494,550L496,550L497,551ZM492,523L490,523L488,524L488,521L489,518L490,516L492,515L493,517L493,522ZM494,533L491,530L490,528L492,529L492,531L494,533ZM476,494L476,496L473,495L471,493L469,489L464,484L466,481L469,481L471,481L472,483L470,485L471,488L472,492L474,494ZM554,608L551,609L550,607L550,604L551,602L553,603L555,606L554,608ZM51,62L54,64L51,66L48,63L46,64L45,62L47,62L51,62ZM616,565L613,565L614,563L617,563L616,565Z"/>
+<text class="sea-name" x="400" y="690">Mare Mediterraneum</text><text class="sea-name" x="780" y="330">Pontus Euxinus</text>
+<path class="road-under" d="M162.4,116.7 C179.6,123.6 229.8,146.3 265.8,157.8 C301.8,169.3 349.1,178.8 378.2,185.9 C407.3,193.0 422.6,180.6 440.5,200.6 C458.4,220.6 471.6,279.8 485.5,306.0 C499.4,332.2 511.1,345.4 523.7,357.7 C536.3,369.9 548.6,372.6 561.1,379.5 C573.6,386.4 584.5,393.2 598.7,399.2 C612.9,405.2 637.9,405.2 646.3,415.3 C654.7,425.4 640.6,440.4 649.2,459.9 C657.8,479.4 672.4,517.4 697.9,532.3 C723.4,547.2 778.4,537.7 802.1,549.2 C825.8,560.7 824.2,591.7 840.3,601.5 C856.4,611.3 893.3,589.7 898.9,607.9 C904.5,626.1 878.4,691.6 873.7,710.8 C869.0,730.0 871.0,721.0 870.5,723.1"/><path class="road" pathLength="1" d="M162.4,116.7 C179.6,123.6 229.8,146.3 265.8,157.8 C301.8,169.3 349.1,178.8 378.2,185.9 C407.3,193.0 422.6,180.6 440.5,200.6 C458.4,220.6 471.6,279.8 485.5,306.0 C499.4,332.2 511.1,345.4 523.7,357.7 C536.3,369.9 548.6,372.6 561.1,379.5 C573.6,386.4 584.5,393.2 598.7,399.2 C612.9,405.2 637.9,405.2 646.3,415.3 C654.7,425.4 640.6,440.4 649.2,459.9 C657.8,479.4 672.4,517.4 697.9,532.3 C723.4,547.2 778.4,537.7 802.1,549.2 C825.8,560.7 824.2,591.7 840.3,601.5 C856.4,611.3 893.3,589.7 898.9,607.9 C904.5,626.1 878.4,691.6 873.7,710.8 C869.0,730.0 871.0,721.0 870.5,723.1"/>
+<circle class="pin" cx="162.4" cy="116.7" r="7"/>
+<circle class="pin" cx="265.8" cy="157.8" r="7"/>
+<circle class="dot" cx="378.2" cy="185.9" r="3.5"/>
+<circle class="dot" cx="440.5" cy="200.6" r="3.5"/>
+<circle class="dot" cx="485.5" cy="306.0" r="3.5"/>
+<circle class="dot" cx="523.7" cy="357.7" r="3.5"/>
+<circle class="dot" cx="561.1" cy="379.5" r="3.5"/>
+<circle class="dot" cx="598.7" cy="399.2" r="3.5"/>
+<circle class="pin" cx="646.3" cy="415.3" r="7"/>
+<circle class="pin" cx="649.2" cy="459.9" r="7"/>
+<circle class="dot" cx="697.9" cy="532.3" r="3.5"/>
+<circle class="pin" cx="802.1" cy="549.2" r="7"/>
+<circle class="pin" cx="840.3" cy="601.5" r="7"/>
+<circle class="dot" cx="898.9" cy="607.9" r="3.5"/>
+<circle class="dot" cx="873.7" cy="710.8" r="3.5"/>
+<circle class="pin" cx="870.5" cy="723.1" r="7"/>
+<text class="place key" x="150.4" y="102.7" text-anchor="end">Lindschied<tspan class="when" x="150.4" dy="1.25em">1189 · takes the cross</tspan></text>
+<text class="place key" x="261.8" y="181.8" text-anchor="end">Regensburg<tspan class="when" x="261.8" dy="1.25em">May 1189 · the host rides out</tspan></text>
+<text class="place" x="378.2" y="173.9" text-anchor="middle">Vienna</text>
+<text class="place" x="473.5" y="310.0" text-anchor="end">Belgrade</text>
+<text class="place key" x="658.3" y="409.3" text-anchor="start">Adrianople<tspan class="when" x="658.3" dy="1.25em">winter 1189</tspan></text>
+<text class="place key" x="637.2" y="469.9" text-anchor="end">Gallipoli<tspan class="when" x="637.2" dy="1.25em">March 1190 · into Asia</tspan></text>
+<text class="place key" x="802.1" y="513.2" text-anchor="middle">Iconium<tspan class="when" x="802.1" dy="1.25em">18 May 1190 · battle</tspan></text>
+<text class="place key" x="826.3" y="623.5" text-anchor="end">River Saleph<tspan class="when" x="826.3" dy="1.25em">10 June 1190 · the emperor drowns</tspan></text>
+<text class="place" x="908.9" y="597.9" text-anchor="start">Antioch</text>
+<text class="place key" x="884.5" y="729.1" text-anchor="start">Acre<tspan class="when" x="884.5" dy="1.25em">1191 · the siege</tspan></text>
+<rect width="100%" height="100%" fill="url(#vig)" pointer-events="none"/>
+<g class="compass" transform="translate(905 110)"><circle r="42"/><path d="M0,-38 L8,0 L0,38 L-8,0Z"/><path class="n" d="M0,-38 L8,0 L-8,0Z"/><text y="-48" text-anchor="middle">N</text></g>
+</svg>
+    </div></div>
+    <ol class="road-list">
+      <li><b>Lindschied, 1189.</b> A second son inherits nothing. He takes the cross.</li>
+      <li><b>Regensburg, May 1189.</b> Barbarossa's host sets out down the Danube.</li>
+      <li><b>Adrianople, winter 1189.</b> The army waits out the winter in Byzantine land.</li>
+      <li><b>Gallipoli, March 1190.</b> Across the straits into Asia.</li>
+      <li><b>Iconium, 18 May 1190.</b> The Seljuk city falls to the crusaders.</li>
+      <li><b>River Saleph, 10 June 1190.</b> The emperor drowns. Most of the host turns home.</li>
+      <li><b>Antioch, summer 1190.</b> The survivors bury what is left of their emperor.</li>
+      <li><b>Acre, 1191.</b> The siege. Somewhere on that road, he stopped praying.</li>
+    </ol>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>At a glance</h2>
+    <dl class="glance">
+      <dt>Difficulty</dt><dd>Cold steel. He does not lose his temper, and rarely the battle.</dd>
+      <dt>Favourite troops</dt><dd>Swordsmen, crossbowmen and trebuchets.</dd>
+      <dt>Castles</dt><dd>Square stone fortresses, crossbows on every tower, pits before the gates. Eight castle layouts of his own.</dd>
+      <dt>Play style</dt><dd>Batters your walls with engines, burns your farms, then walks in with swordsmen. Kind to his own people, no quarter for anyone else.</dd>
+      <dt>In his voice</dt><dd>32 spoken lines in German-accented English, and four reaction videos.</dd>
+      <dt>On the map</dt><dd>His own figure: black surcoat, rooster shield, the long sword, in every pose.</dd>
+    </dl>
+    <blockquote>"Gnade? Nein. Not here, Kleiner. Not for you."</blockquote>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Add him to your game</h2>
+    <div class="steps">
+      <div class="step">
+        <h3>Strong Hold (Mac)</h3>
+        <ol>
+          <li>Download the zip above. Leave it zipped.</li>
+          <li>Skirmish &gt; Add AI, then click the <b>Import</b> tile (or drop the zip on the game window).</li>
+          <li>His story plays, and his face joins the lords. The red (!) on it opens his page.</li>
+        </ol>
+        <p>LAN games: every player imports the same zip.</p>
+      </div>
+    </div>
+    <p class="meta" style="margin-top:22px">SHA-256 of the zip: <code>98dc549b2c3d1899ba712063abdf74721b64621fb6000b74d281a3a0f801384d</code></p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    A fan-made custom lord, not made, endorsed or sponsored by Firefly Studios. Stronghold and Stronghold Crusader are trademarks of Firefly Studios. The zip holds only this lord's own files: personality, castles, pictures, voice, videos and his map figure, all made for him. <a href="../">Strong Hold</a>.
+  </div>
+</footer>
+<script>
+  // the route draws itself once the map scrolls into view; the card leans after the mouse
+  (() => {
+    const map = document.querySelector('.route-map'), card = document.getElementById('card');
+    new IntersectionObserver((es, o) => { if (es[0].isIntersecting) { map.classList.add('drawn'); o.disconnect(); } }, { threshold: .35 }).observe(map);
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches || matchMedia('(hover: none)').matches) return;
+    card.addEventListener('mousemove', e => {
+      const r = card.getBoundingClientRect(), x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5;
+      card.style.setProperty('--ry', (x * 10).toFixed(2) + 'deg'); card.style.setProperty('--rx', (-y * 6).toFixed(2) + 'deg');
+    });
+    card.addEventListener('mouseleave', () => { card.style.removeProperty('--ry'); card.style.removeProperty('--rx'); });
+  })();
+</script>
+</body>
+</html>
