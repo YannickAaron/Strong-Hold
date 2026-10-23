@@ -64,8 +64,8 @@ passed to it once and never saved. The game's files go to `~/Library/Application
 
 **Files:** the app writes only to `~/Library/Application Support/Strong Hold` (your copy of the game, the prepared
 assets, settings, saves, maps) and `~/Library/Logs/Strong Hold.log`. A copy of the game in CrossOver is only read
-(its saves show up in Load Game too, and deleting one there deletes it), and so are its CustomLords folder and, if
-installed through Steam, Stronghold Crusader 2 (its Sassanid Knight is prepared from it into the folder above). To uninstall, drag the app to the Bin and delete that folder.
+(its saves show up in Load Game too, and deleting one there deletes it), and so is its CustomLords folder. To
+uninstall, drag the app to the Bin and delete that folder.
 
 **Other programs** it starts: DepotDownloader (Steam download), macOS's `curl` (update check), `open` (when you click to
 show a folder or the releases page).
@@ -94,6 +94,7 @@ game files, settings and saves stay.
 
 | Version | Date | What's new |
 |---|---|---|
+| [0.11.2](https://github.com/YannickAaron/Strong-Hold/releases/tag/v0.11.2) | 23 Oct 2026 | Troops standing just behind a building now stay behind it instead of being drawn over its roof; archers on keeps stand behind the battlements. The download is about 5 MB bigger: the art for the coming Sassanid Knight is already inside |
 | [0.11.1](https://github.com/YannickAaron/Strong-Hold/releases/tag/v0.11.1) | 23 Oct 2026 | Troops walking behind buildings now go behind them, the right-click menu no longer opens when you order your lord with the modern controls, and the move / attack cursor is the original's size on Retina screens |
 | [0.11.0](https://github.com/YannickAaron/Strong-Hold/releases/tag/v0.11.0) | 23 Oct 2026 | Custom AI lords: lords from the game's CustomLords / CustomMedia folders join skirmishes with their own face, voice and videos. Click one unit out of a selected group to command it alone; click a troop type in the troops panel to keep only that type, right-click it to drop it |
 | [0.10.0](https://github.com/YannickAaron/Strong-Hold/releases/tag/v0.10.0) | 23 Oct 2026 | King of the Hill: a new skirmish and LAN mode with a guarded tower on the hill to conquer and hold, and AI lords that fight for it. Buttons, checkboxes, panels and text boxes in the game's own red-and-gold look. For King of the Hill over LAN everyone needs 0.10.0 |
