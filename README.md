@@ -77,7 +77,7 @@ no network or file code), and every release's SHA-256 and VirusTotal scan.
 | | |
 |---|---|
 | **Single player** | Skirmish against AI lords (Advanced Skirmish Options, Extreme), the historical campaigns with story pages, the Crusader Trail with Sands of Time, ranks, Customize, Skirmish Masters and custom trails, the tutorial, Free Build with events and powers |
-| **Multiplayer** | Local network (LAN) games, co-op Crusader Trail, chat to chosen players or teams, insults, pause, multiplayer saves |
+| **Multiplayer** | Local network (LAN) games, co-op Crusader Trail, chat to chosen players or teams, insults, pause, game speed for everyone, multiplayer saves |
 | **Map Editor** | Shape the land (heights, ground types, water, trees, rocks, animals), place keeps, buildings, walls and troops, starting goods; your maps play in Custom Skirmish and Sandbox |
 | **Your lord** | Player name, colour and coat of arms editor, shown on troops, flags, lobby, trails and score screens |
 | **The game's own feel** | Original music, speech, advisor and lord videos, win/lose videos, in-game Help pages, score screens with graphs, reports, building panels, market trading, tooltips, the original hotkeys |
@@ -93,6 +93,7 @@ game files, settings and saves stay.
 
 | Version | Date | What's new |
 |---|---|---|
+| [0.9.0](https://github.com/YannickAaron/Strong-Hold/releases/tag/v0.9.0) | 23 Oct 2026 | Change the game speed during LAN games and co-op missions (+ / − keys or Options): it changes for every player (everyone needs 0.9.0) |
 | [0.8.1](https://github.com/YannickAaron/Strong-Hold/releases/tag/v0.8.1) | 22 Oct 2026 | No more shell script inside the app (one virus scanner mistook it for a trojan), the source code of everything except the simulation is public, and a page on what the app does on your Mac |
 | [0.8.0](https://github.com/YannickAaron/Strong-Hold/releases/tag/v0.8.0) | 22 Oct 2026 | Map Editor part 2: keeps, buildings, walls, troops and starting goods per player; editor maps play in Custom Skirmish. Coat of arms editor, type your player name. LAN shares coats of arms (everyone needs 0.8.0) |
 | [0.7.0](https://github.com/YannickAaron/Strong-Hold/releases/tag/v0.7.0) | 22 Oct 2026 | Sands of Time results after each trail win, trail completion screens, campaign missions wait for the advisor before the mission-over screen, "New game files available" downloads only what's missing |
