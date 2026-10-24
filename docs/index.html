@@ -162,7 +162,7 @@
     <h2>What the app does on your Mac</h2>
     <p class="lead">No telemetry, no analytics, no ads, no account of ours. The internet is used for three things, nothing else:</p>
     <div class="steps">
-      <div class="step"><div class="n">I</div><h3>Updates</h3><p>From GitHub only. Once a day, and when you press Check for updates in Extras, the app asks for the latest release and the published custom lords. It sends only its version; GitHub sees your IP address, like any website. It downloads only when you click Update or Get, and installs nothing whose SHA-256 differs from the one GitHub lists.</p></div>
+      <div class="step"><div class="n">I</div><h3>Updates</h3><p>From GitHub only. Once a day, and when you press Check for updates in Extras, the app asks for the latest release and the published custom lords and maps. It sends only its version; GitHub sees your IP address, like any website. It downloads only when you click Update or Get, and installs nothing whose SHA-256 differs from the one GitHub lists.</p></div>
       <div class="step"><div class="n">II</div><h3>Steam</h3><p>Only when you choose to download the game: Valve's open-source DepotDownloader signs in and downloads. Your password goes to it once, through its input: never saved, never logged, never on a command line.</p></div>
       <div class="step"><div class="n">III</div><h3>LAN games</h3><p>Only when you host or join: your local network, UDP port 47777 to find games and TCP 47778 to play.</p></div>
     </div>
@@ -200,11 +200,27 @@
   </div>
 </section>
 
+<section id="beyond">
+  <div class="wrap">
+    <h2>Beyond the original</h2>
+    <p class="lead">A fan port can add what the original never had. Everything here lives outside the simulation, which stays byte for byte the original's, so saves, replays and LAN games stay exact. Rule changes are opt-in.</p>
+    <div class="feat">
+      <div><h3>Custom lords</h3><p>Add AI lords from a .zip: their own face, voice, castles, story video and reactions to the battle. Lord David von Lindschied is the first; published lords install and update from Extras.</p></div>
+      <div><h3>Extended rules</h3><p>An opt-in lobby switch for new units and rules. First in: the Sassanid Knight, a lancer whose first blow after a six-tile charge strikes twice as hard, trained at the Sassanid Stable. Classic games are untouched.</p></div>
+      <div><h3>Modes and lobby</h3><p>King of the Hill (short, normal, long), a clear game mode picker, Competitive Start, custom maps that travel to everyone in a LAN game, and a Maps catalog in Extras.</p></div>
+      <div><h3>Controls</h3><p>Click one unit out of a group, filter a selection by troop type, right-click rally points, add to a group, select all of a type, more hotkeys, and units that move on an even clock even when the Mac is busy.</p></div>
+      <div><h3>Sturdier multiplayer</h3><p>A new host takes over when the host leaves, the host checks every message before it reaches the game, a frozen peer no longer freezes everyone, dropped players rejoin, spectators follow along.</p></div>
+      <div><h3>Tools</h3><p>Replays of every game, a frame trace and judder score for tuning, an in-app updater, and a simulation proven tick by tick against the original engine, so a port bug and an original quirk are told apart.</p></div>
+    </div>
+  </div>
+</section>
+
 <section id="releases">
   <div class="wrap">
     <h2>Releases</h2>
     <p class="lead">A new version every few days. The app tells you when one is out: download the new DMG and drag it over the old app; your game files, settings and saves stay. <a href="https://github.com/YannickAaron/Strong-Hold/releases">Every release on GitHub</a>.</p>
     <ul class="rel">
+      <li><b><a href="https://github.com/YannickAaron/Strong-Hold/releases/tag/v0.15.0" style="color:inherit;text-decoration:none">0.15.0</a></b><span class="d">24 Oct 2026</span><p>Extended rules: an opt-in switch in the skirmish and LAN lobby with the Sassanid Knight, a lancer whose first blow after a six-tile charge strikes twice as hard, trained at the new Sassanid Stable. In the lobby: a clear game mode picker, Competitive Start, and search, sort and Show Completed in the Custom Scenarios and Free Build lists. In game: the standings (Order of Merit) panel, ally ping (Alt+P) with its marker button by the minimap, right-click rally points, add-to-group and select-all-of-a-type hotkeys, custom maps that travel over LAN and a Maps catalog in Extras, and the Classic mouse-wheel, radar zoom, planned-moat and spoken-greeting options now applied. As in the Definitive Edition: the siege tent shows at the cursor when engineers place an engine, Quit Mission and Exit Crusader ask first, the mission briefing opens in skirmishes too, buildings and troops in your player colour, hover texts on the side tabs, and the mercenary post and armoury panels tidied. Fixes: letters no longer vanish from menus after a long session, the Keeps menu is locked in games (a stray keep could move yours), smoother camera and walking under load. Lord David von Lindschied reacts to the battle with 16 new clips, carries his own banner and guard, and no longer sells his wheat and flour. macOS Game Mode in full screen.</p></li>
       <li><b><a href="https://github.com/YannickAaron/Strong-Hold/releases/tag/v0.14.0" style="color:inherit;text-decoration:none">0.14.0</a></b><span class="d">24 Oct 2026</span><p>The app updates itself: Update in the main menu or Extras downloads the new version (about 13 MB), checks it, and Restart to update installs it, so no more new DMG for every release. Custom lords from the web: Extras lists the published lords with Get / Update, and the main menu tells you when one of yours has a newer version (Lord David von Lindschied is the first). Sturdier LAN games, and saves, settings and maps that can't be lost to a crash mid-write.</p></li>
       <li><b><a href="https://github.com/YannickAaron/Strong-Hold/releases/tag/v0.13.4" style="color:inherit;text-decoration:none">0.13.4</a></b><span class="d">24 Oct 2026</span><p>Catapults, siege towers, battering rams and fire ballistas swing round to a new direction as in the original instead of snapping.</p></li>
       <li><b><a href="https://github.com/YannickAaron/Strong-Hold/releases/tag/v0.13.3" style="color:inherit;text-decoration:none">0.13.3</a></b><span class="d">24 Oct 2026</span><p>An assassin's climbing rope fades out as in the original instead of vanishing at once.</p></li>

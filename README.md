@@ -54,8 +54,9 @@ passed to it once and never saved. The game's files go to `~/Library/Application
 
 **Internet: three things, nothing else.**
 1. **Updates**, from GitHub only. Once a day and when you press Check for updates in Extras, the app asks for the latest
-   release and the list of published custom lords. It sends only the app's version (GitHub sees your IP address, like
-   any website). It downloads only when you click Update (the new app, ~13 MB) or Get / Update on a lord, and installs
+   release and the lists of published custom lords and maps. It sends only the app's version (GitHub sees your IP
+   address, like any website). It downloads only when you click Update (the new app, ~13 MB) or Get / Update on a lord
+   or a map, and installs
    nothing whose SHA-256 differs from the one GitHub lists for that file.
 2. **Steam**, only when you choose to download the game: Valve's open-source DepotDownloader signs in and downloads from
    Steam. The password you type goes to it once, through its input: never saved, never written to the log, never on a
@@ -91,6 +92,20 @@ no network or file code), and every release's SHA-256 and VirusTotal scan.
 The port is in active development; parts of the simulation are still being checked against the original.
 Not yet: online multiplayer (Steam), Intel Macs.
 
+## Beyond the original
+
+A fan port can add what the original never had. Everything here lives outside the simulation, which stays byte for
+byte the original's, so saves, replays and LAN games stay exact. Rule changes are opt-in.
+
+| | |
+|---|---|
+| **Custom lords** | AI lords from a .zip with their own face, voice, castles, story video and reactions to the battle; Lord David von Lindschied is the first, and published lords install and update from Extras |
+| **Extended rules** | An opt-in lobby switch for new units and rules; first in: the Sassanid Knight (a lancer whose first blow after a six-tile charge strikes twice as hard) and the Sassanid Stable; classic games untouched |
+| **Modes and lobby** | King of the Hill (short, normal, long), a clear game mode picker, Competitive Start, custom maps that travel to everyone in a LAN game, a Maps catalog in Extras |
+| **Controls** | Click one unit out of a group, filter a selection by troop type, right-click rally points, add to a group, select all of a type, more hotkeys, units on an even clock when the Mac is busy |
+| **Sturdier multiplayer** | A new host takes over when the host leaves, the host checks every message before it reaches the game, a frozen peer no longer freezes everyone, dropped players rejoin, spectators follow along |
+| **Tools** | Replays of every game, a frame trace and judder score for tuning, an in-app updater, a simulation proven tick by tick against the original engine |
+
 ## Release history
 
 Every release: [Releases](https://github.com/YannickAaron/Strong-Hold/releases). Update in the app: click the update
@@ -99,6 +114,7 @@ button opens the download page instead). Your game files, settings and saves sta
 
 | Version | Date | What's new |
 |---|---|---|
+| [0.15.0](https://github.com/YannickAaron/Strong-Hold/releases/tag/v0.15.0) | 24 Oct 2026 | Extended rules: an opt-in switch in the skirmish and LAN lobby with the Sassanid Knight, a lancer whose first blow after a six-tile charge strikes twice as hard, trained at the new Sassanid Stable. In the lobby: a clear game mode picker, Competitive Start, and search, sort and Show Completed in the Custom Scenarios and Free Build lists. In game: the standings (Order of Merit) panel, ally ping (Alt+P) with its marker button by the minimap, right-click rally points, add-to-group and select-all-of-a-type hotkeys, custom maps that travel over LAN and a Maps catalog in Extras, and the Classic mouse-wheel, radar zoom, planned-moat and spoken-greeting options now applied. As in the Definitive Edition: the siege tent shows at the cursor when engineers place an engine, Quit Mission and Exit Crusader ask first, the mission briefing opens in skirmishes too, buildings and troops in your player colour, hover texts on the side tabs, and the mercenary post and armoury panels tidied. Fixes: letters no longer vanish from menus after a long session, the Keeps menu is locked in games (a stray keep could move yours), smoother camera and walking under load. Lord David von Lindschied reacts to the battle with 16 new clips, carries his own banner and guard, and no longer sells his wheat and flour. macOS Game Mode in full screen. |
 | [0.14.0](https://github.com/YannickAaron/Strong-Hold/releases/tag/v0.14.0) | 24 Oct 2026 | The app updates itself: Update in the main menu or Extras downloads the new version (about 13 MB), checks it, and Restart to update installs it, so no more new DMG for every release. Custom lords from the web: Extras lists the published lords with Get / Update, and the main menu tells you when one of yours has a newer version (Lord David von Lindschied is the first). LAN games are sturdier: the host checks every player's messages, a player who stops responding no longer freezes the host, and rejoining and loading saved LAN games work again. Saves, settings and maps can't be lost to a crash mid-write, a failed game load shows an error instead of loading forever, and the Map Editor no longer quits on a bad map |
 | [0.13.4](https://github.com/YannickAaron/Strong-Hold/releases/tag/v0.13.4) | 24 Oct 2026 | Catapults, siege towers, battering rams and fire ballistas swing round to a new direction as in the original instead of snapping |
 | [0.13.3](https://github.com/YannickAaron/Strong-Hold/releases/tag/v0.13.3) | 24 Oct 2026 | An assassin's climbing rope fades out as in the original instead of vanishing at once |

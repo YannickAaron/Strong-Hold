@@ -58,6 +58,15 @@
   code { background: #0005; padding: 2px 6px; border-radius: 4px; font-size: 13px; color: var(--gold2); word-break: break-all; }
   footer { border-top: 1px solid var(--line); padding: 30px 0 50px; color: var(--dim); font-size: 13px; }
   .clip-cap { color: var(--dim); font-size: 14px; font-style: italic; margin-top: 10px; }
+  .reels { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 0 0 26px; }
+  .reels figure { margin: 0; }
+  .reels video { aspect-ratio: 1; object-fit: cover; }
+  .reels figcaption { font-size: 13px; }
+  table.reacts { width: 100%; border-collapse: collapse; font-size: 15px; }
+  table.reacts th { font-family: Cinzel, serif; color: var(--gold); text-align: left; font-weight: 700; padding: 8px 10px; border-bottom: 1px solid var(--line); }
+  table.reacts td { padding: 8px 10px; border-bottom: 1px solid #5a422866; vertical-align: top; }
+  table.reacts td:nth-child(2) { font-style: italic; }
+  .new { display: inline-block; font: 700 11px/1 Cinzel, serif; color: #fff; background: var(--crimson); border-radius: 4px; padding: 3px 6px; margin-left: 6px; vertical-align: 2px; letter-spacing: .06em; }
 
   /* the road east: a parchment map on a tilted card */
   .road-sec { overflow: hidden; } /* the tilted card reaches past the window edge */
@@ -85,6 +94,8 @@
   @media (prefers-reduced-motion: reduce) { .card { transition: none; } .route-map .road { stroke-dashoffset: 0; } .route-map.drawn .road { transition: none; } }
   @media (max-width: 760px) {
     .story { grid-template-columns: 1fr; }
+    .reels { grid-template-columns: repeat(2, 1fr); }
+    table.reacts { font-size: 14px; } table.reacts td:nth-child(3) { display: none; } table.reacts th:nth-child(3) { display: none; }
     dl.glance { grid-template-columns: 1fr; gap: 2px; }
     dl.glance dd { margin-bottom: 12px; }
     .hero .arms { width: 60px; height: 60px; }
@@ -101,7 +112,7 @@
     <img class="arms" src="arms.png" alt="The Lindschied arms: a black rooster on gold">
     <h1>Lord David von Lindschied</h1>
     <p class="sub">The Cold Rooster of the Rhineland. A custom AI lord for Strong Hold.</p>
-    <a class="btn primary" href="https://github.com/YannickAaron/Strong-Hold/releases/download/lords/Lord-David-von-Lindschied.zip">Download the lord (.zip, 34 MB)</a>
+    <a class="btn primary" href="https://github.com/YannickAaron/Strong-Hold/releases/download/lords/Lord-David-von-Lindschied.zip">Download the lord (.zip, 54 MB)</a>
     <a class="btn ghost" href="#trailer">Watch his story</a>
     <div class="meta">For <a href="../">Strong Hold</a> 0.12.0 or newer, the Mac engine for Stronghold Crusader.</div>
   </div>
@@ -122,7 +133,46 @@
     <video controls muted loop playsinline preload="metadata" poster="in-game.jpg">
       <source src="in-game.mp4" type="video/mp4">
     </video>
-    <p class="clip-cap">In the game: three swordsmen climb onto his keep, and Lord David meets them with the sword while his own men come running. His own figure comes with the zip.</p>
+    <p class="clip-cap">In the game: three swordsmen climb onto his keep, and Lord David meets them with the sword while his own men come running. His own figure comes with the zip, and so does his livery: the black rooster on gold flies over his keep and towers, and his swordsmen wear black and gold. Your team colour stays on their crosses and the flag's border.</p>
+  </div>
+</section>
+
+<section id="reactions">
+  <div class="wrap">
+    <h2>How he reacts</h2>
+    <p>He does not just talk. Every line comes with a look, and he watches the battle: when your wall falls, when your farms burn, when he bleeds. New in this version: 16 more clips (his big lines get their own), and he reacts to nine things the original lords ignore, each with its own spoken line. He keeps it to one at a time.</p>
+    <p class="meta">The new clips and reactions come with the next Strong Hold update; get his newest zip in Extras (Update) now and they start with it. Strong Hold 0.14.0 plays his first four clips.</p>
+    <div class="reels">
+      <figure><video autoplay muted loop playsinline preload="none" poster="react/angry_castle_damaged.jpg"><source src="react/angry_castle_damaged.mp4" type="video/mp4"></video><figcaption>You damage his castle: the table goes first.</figcaption></figure>
+      <figure><video autoplay muted loop playsinline preload="none" poster="react/react_farms.jpg"><source src="react/react_farms.mp4" type="video/mp4"></video><figcaption>Your farms burn. So does your banner.</figcaption></figure>
+      <figure><video autoplay muted loop playsinline preload="none" poster="react/kill_player.jpg"><source src="react/kill_player.mp4" type="video/mp4"></video><figcaption>He kills you, and cleans the blade.</figcaption></figure>
+      <figure><video autoplay muted loop playsinline preload="none" poster="react/angry_3.jpg"><source src="react/angry_3.mp4" type="video/mp4"></video><figcaption>Angry, variant two: the cup does not survive.</figcaption></figure>
+      <figure><video autoplay muted loop playsinline preload="none" poster="react/victory_harass.jpg"><source src="react/victory_harass.mp4" type="video/mp4"></video><figcaption>He burned your fields. He enjoyed it.</figcaption></figure>
+      <figure><video autoplay muted loop playsinline preload="none" poster="react/react_tower_lost.jpg"><source src="react/react_tower_lost.mp4" type="video/mp4"></video><figcaption>He loses a tower. He will remember.</figcaption></figure>
+      <figure><video autoplay muted loop playsinline preload="none" poster="react/react_breach.jpg"><source src="react/react_breach.mp4" type="video/mp4"></video><figcaption>Your wall falls. He heard it.</figcaption></figure>
+      <figure><video autoplay muted loop playsinline preload="none" poster="react/defeat.jpg"><source src="react/defeat.mp4" type="video/mp4"></video><figcaption>He falls. Quietly.</figcaption></figure>
+    </div>
+    <table class="reacts">
+      <thead><tr><th>When</th><th>He says</th><th>His look</th></tr></thead>
+      <tbody>
+        <tr><td>He kills you</td><td>Finished. Hand over your sword. No, keep it. It was never sharp.</td><td>wipes his blade clean</td></tr>
+        <tr><td>He burned your farms</td><td>Your farms burn well, Kleiner. Your peasants ran well too.</td><td>stares through the smoke</td></tr>
+        <tr><td>You damage his castle</td><td>Stone can be mended. The insult cannot. Wir sehen uns.</td><td>hacks a table in two</td></tr>
+        <tr><td>He marches (to his allies)</td><td>My engines are rolling. Watch the walls fall, friend.</td><td>raises the sword, the engines roll</td></tr>
+        <tr><td>He falls</td><td>Gott was not watching. Tell my people I kept my word.</td><td>kneels by his sword</td></tr>
+        <tr><td>Any other of his 30 lines</td><td>Taunts, threats, thanks, calls for help</td><td>one of 9 mood clips at random, never the same twice in a row (5 new)</td></tr>
+        <tr><td>Your tower or gate falls <span class="new">New</span></td><td>Hear that, Kleiner? That was your wall.</td><td>a wall collapses far off; he nods</td></tr>
+        <tr><td>Your farms burn <span class="new">New</span></td><td>Smell that? Your bread is burning, Kleiner.</td><td>drops a burnt banner into the fire</td></tr>
+        <tr><td>Your lord is hit <span class="new">New</span></td><td>You bleed, Kleiner. Gut.</td><td>leans in like a predator</td></tr>
+        <tr><td>He loses a tower <span class="new">New</span></td><td>One tower. You will pay for every stone of it.</td><td>his tower burns behind him</td></tr>
+        <tr><td>His lord is hit <span class="new">New</span></td><td>You scratched me. Nobody scratches me twice.</td><td>wipes the blood off his cheek</td></tr>
+        <tr><td>His siege sets out for you <span class="new">New</span></td><td>My engines are coming, Kleiner. Count your stones.</td><td>raises the sword, the engines roll</td></tr>
+        <tr><td>You ignore his request (ally) <span class="new">New</span></td><td>Nothing? I remember such things too, Freund.</td><td>one of his angry looks</td></tr>
+        <tr><td>You click his face (ally) <span class="new">New</span></td><td>Ja, Freund? Speak.</td><td>raises an eyebrow</td></tr>
+        <tr><td>You send your allies at him <span class="new">New</span></td><td>You send your friends against me, Kleiner? Gut. Let them come.</td><td>raises an eyebrow</td></tr>
+      </tbody>
+    </table>
+    <p class="clip-cap">The first six rows are moments the game itself gives him a line for; their clips are new. Rows marked New are reactions only Strong Hold has, in his own voice. They are looks only: the battle itself plays exactly as in the original, so LAN games stay in step.</p>
   </div>
 </section>
 
@@ -206,7 +256,7 @@
       <dt>Favourite troops</dt><dd>Swordsmen, crossbowmen and trebuchets.</dd>
       <dt>Castles</dt><dd>Square stone fortresses, crossbows on every tower, pits before the gates. Eight castle layouts of his own.</dd>
       <dt>Play style</dt><dd>Batters your walls with engines, burns your farms, then walks in with swordsmen. Kind to his own people, no quarter for anyone else.</dd>
-      <dt>In his voice</dt><dd>32 spoken lines in German-accented English, and four reaction videos.</dd>
+      <dt>In his voice</dt><dd>41 spoken lines in German-accented English, and 20 reaction videos: his big lines have their own, the rest pick from nine moods.</dd>
       <dt>On the map</dt><dd>His own figure: black surcoat, rooster shield, the long sword, in every pose.</dd>
     </dl>
     <blockquote>"Gnade? Nein. Not here, Kleiner. Not for you."</blockquote>
@@ -227,7 +277,7 @@
         <p>LAN games: every player needs the same version of him (Extras shows Update when yours is older).</p>
       </div>
     </div>
-    <p class="meta" style="margin-top:22px">SHA-256 of the zip: <code>98dc549b2c3d1899ba712063abdf74721b64621fb6000b74d281a3a0f801384d</code></p>
+    <p class="meta" style="margin-top:22px">SHA-256 of the zip: <code>36b5c020438efeac8e9b212184ae6890a7d95a66d7d121c53574372d455b9883</code></p>
   </div>
 </section>
 
