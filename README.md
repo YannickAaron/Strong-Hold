@@ -53,8 +53,10 @@ passed to it once and never saved. The game's files go to `~/Library/Application
 ## What the app does on your Mac
 
 **Internet: three things, nothing else.**
-1. **Update check**, once a day and when you press Check for updates in Extras: asks GitHub for the latest release. It sends only the app's version (GitHub sees your
-   IP address, like any website).
+1. **Updates**, from GitHub only. Once a day and when you press Check for updates in Extras, the app asks for the latest
+   release and the list of published custom lords. It sends only the app's version (GitHub sees your IP address, like
+   any website). It downloads only when you click Update (the new app, ~13 MB) or Get / Update on a lord, and installs
+   nothing whose SHA-256 differs from the one GitHub lists for that file.
 2. **Steam**, only when you choose to download the game: Valve's open-source DepotDownloader signs in and downloads from
    Steam. The password you type goes to it once, through its input: never saved, never written to the log, never on a
    command line.
@@ -63,12 +65,14 @@ passed to it once and never saved. The game's files go to `~/Library/Application
 **No telemetry**, no analytics, no ads, no account of ours.
 
 **Files:** the app writes only to `~/Library/Application Support/Strong Hold` (your copy of the game, the prepared
-assets, settings, saves, maps, imported lords) and `~/Library/Logs/Strong Hold.log`. A copy of the game in CrossOver is only read
-(its saves show up in Load Game too, and deleting one there deletes it), and so is its CustomLords folder; a lord's .zip you import is only read. To
-uninstall, drag the app to the Bin and delete that folder.
+assets, settings, saves, maps, imported lords) and `~/Library/Logs/Strong Hold.log`, and, when you click Update, its
+own app: the new version goes next to it, and Restart to update swaps the two. A copy of the game in CrossOver is only read
+(its saves show up in Load Game too, and can't be deleted from here), and so is its CustomLords folder; a lord's .zip you import is only read. DepotDownloader (.NET) may leave an empty `IsolatedStorage` folder next to ours. To
+uninstall, drag the app to the Bin and delete those folders.
 
-**Other programs** it starts: DepotDownloader (Steam download), macOS's `curl` (update check), `open` (when you click to
-show a folder or the releases page).
+**Other programs** it starts: DepotDownloader (Steam download), macOS's `curl` (update check and downloads), `shasum`
+(checking them), `tar`, `hdiutil`, `ditto` and `codesign` (unpacking and checking an update), `open` (when you click to
+show a folder or the releases page, and to start the updated app), `date` (once, for your time zone on the save list).
 
 **Check it yourself:** the [source code](https://github.com/YannickAaron/Strong-Hold-source) of everything above (all of the app except the simulation, which has
 no network or file code), and every release's SHA-256 and VirusTotal scan.
@@ -82,18 +86,20 @@ no network or file code), and every release's SHA-256 and VirusTotal scan.
 | **Map Editor** | Shape the land (heights, ground types, water, trees, rocks, animals), place keeps, buildings, walls and troops, starting goods; your maps play in Custom Skirmish and Sandbox |
 | **Your lord** | Player name, colour and coat of arms editor, shown on troops, flags, lobby, trails and score screens |
 | **The game's own feel** | Original music, speech, advisor and lord videos, win/lose videos, in-game Help pages, score screens with graphs, reports, building panels, market trading, tooltips, the original hotkeys |
-| **On the Mac** | Native Metal at 120 fps, 12× fast-forward, menu bar, trackpad zoom and rotate, full screen / borderless / windowed, saves in your Library, update notice when a new version is out |
+| **On the Mac** | Native Metal at 120 fps, 12× fast-forward, menu bar, trackpad zoom and rotate, full screen / borderless / windowed, saves in your Library, updates itself in two clicks (and your custom lords) |
 
 The port is in active development; parts of the simulation are still being checked against the original.
 Not yet: online multiplayer (Steam), Intel Macs.
 
 ## Release history
 
-Every release: [Releases](https://github.com/YannickAaron/Strong-Hold/releases). Update by downloading the new DMG; your
-game files, settings and saves stay.
+Every release: [Releases](https://github.com/YannickAaron/Strong-Hold/releases). Update in the app: click the update
+button in the main menu or Extras, then Restart to update (if the app can't replace itself, e.g. run from the DMG, the
+button opens the download page instead). Your game files, settings and saves stay.
 
 | Version | Date | What's new |
 |---|---|---|
+| [0.14.0](https://github.com/YannickAaron/Strong-Hold/releases/tag/v0.14.0) | 24 Oct 2026 | The app updates itself: Update in the main menu or Extras downloads the new version (about 13 MB), checks it, and Restart to update installs it, so no more new DMG for every release. Custom lords from the web: Extras lists the published lords with Get / Update, and the main menu tells you when one of yours has a newer version (Lord David von Lindschied is the first). LAN games are sturdier: the host checks every player's messages, a player who stops responding no longer freezes the host, and rejoining and loading saved LAN games work again. Saves, settings and maps can't be lost to a crash mid-write, a failed game load shows an error instead of loading forever, and the Map Editor no longer quits on a bad map |
 | [0.13.4](https://github.com/YannickAaron/Strong-Hold/releases/tag/v0.13.4) | 24 Oct 2026 | Catapults, siege towers, battering rams and fire ballistas swing round to a new direction as in the original instead of snapping |
 | [0.13.3](https://github.com/YannickAaron/Strong-Hold/releases/tag/v0.13.3) | 24 Oct 2026 | An assassin's climbing rope fades out as in the original instead of vanishing at once |
 | [0.13.2](https://github.com/YannickAaron/Strong-Hold/releases/tag/v0.13.2) | 24 Oct 2026 | Horses (and every walking unit) move evenly in a live game, also in big armies on a full screen: no more two-steps-then-pause judder when macOS paces frames unevenly |
