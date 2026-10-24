@@ -53,7 +53,7 @@ passed to it once and never saved. The game's files go to `~/Library/Application
 ## What the app does on your Mac
 
 **Internet: three things, nothing else.**
-1. **Update check**, once a day: asks GitHub for the latest release. It sends only the app's version (GitHub sees your
+1. **Update check**, once a day and when you press Check for updates in Extras: asks GitHub for the latest release. It sends only the app's version (GitHub sees your
    IP address, like any website).
 2. **Steam**, only when you choose to download the game: Valve's open-source DepotDownloader signs in and downloads from
    Steam. The password you type goes to it once, through its input: never saved, never written to the log, never on a
@@ -94,6 +94,7 @@ game files, settings and saves stay.
 
 | Version | Date | What's new |
 |---|---|---|
+| [0.13.0](https://github.com/YannickAaron/Strong-Hold/releases/tag/v0.13.0) | 24 Oct 2026 | A new Extras button on the main menu: this build's version and folders, Check for updates, the patch notes, and your custom lords with Import lord (.zip). Importing moved here from the skirmish's Add AI panel: an imported lord simply joins the Add AI faces, and a .zip dropped on the window opens Extras with the result |
 | [0.12.3](https://github.com/YannickAaron/Strong-Hold/releases/tag/v0.12.3) | 23 Oct 2026 | Pressing a build hotkey the game refuses (walls without stone) no longer shows a red outline with a "Not ported in the sim yet" note at the cursor |
 | [0.12.2](https://github.com/YannickAaron/Strong-Hold/releases/tag/v0.12.2) | 23 Oct 2026 | Knights and other horses ride smoothly, also in big armies: no more stop-and-go on every step, no jumping back in a crowd, and they keep gliding when a large battle slows the game down |
 | [0.12.1](https://github.com/YannickAaron/Strong-Hold/releases/tag/v0.12.1) | 23 Oct 2026 | Importing a lord from a .zip in Add AI now opens his story page right away and plays his story video when he brings one. Custom lords can bring a full-screen story video ("Watch his story" on their page). A custom lord's keep, scores and stats now show his own name instead of the Rat's. A first custom lord to try, Lord David von Lindschied, is attached to the release as a .zip |
