@@ -94,6 +94,7 @@ game files, settings and saves stay.
 
 | Version | Date | What's new |
 |---|---|---|
+| [0.13.4](https://github.com/YannickAaron/Strong-Hold/releases/tag/v0.13.4) | 24 Oct 2026 | Catapults, siege towers, battering rams and fire ballistas swing round to a new direction as in the original instead of snapping |
 | [0.13.3](https://github.com/YannickAaron/Strong-Hold/releases/tag/v0.13.3) | 24 Oct 2026 | An assassin's climbing rope fades out as in the original instead of vanishing at once |
 | [0.13.2](https://github.com/YannickAaron/Strong-Hold/releases/tag/v0.13.2) | 24 Oct 2026 | Horses (and every walking unit) move evenly in a live game, also in big armies on a full screen: no more two-steps-then-pause judder when macOS paces frames unevenly |
 | [0.13.1](https://github.com/YannickAaron/Strong-Hold/releases/tag/v0.13.1) | 24 Oct 2026 | LAN: the game no longer can freeze for everyone when the host quits a game of three or more players |
